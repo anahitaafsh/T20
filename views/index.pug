@@ -2,4 +2,24 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to our #{title}
+  h5 by Aayushi, Anahita, Ashwin, Melody, Rachel, and Zach
+  h3 Project Steps 
+  #checklist 
+    input(type='checkbox' checked='')
+    label Deploy to App Service
+    
+    input(type='checkbox')
+    label Connect to Database
+    
+    input(type='checkbox')
+    label Authenticate with Azure AD
+    
+    input(type='checkbox')
+    label Connect to IoT
+
+    input(type='checkbox' checked='')
+    label Continuous Deployment with Github
+
+    input(type='checkbox')
+    label AI?
