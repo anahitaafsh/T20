@@ -6,6 +6,18 @@ block content
   h5 by Aayushi, Anahita, Ashwin, Melody, Rachel, and Zach
   p 
     a(href='https://github.com/anahitaafsh/t20') Github Repo
+  if isAuthenticated
+    h3 welcome #{username}!
+    a(href='/users/id') view ID token claims
+    br
+    br
+    a(href='/auth/acquireToken') acquire token
+    br
+    br
+    a(href='/auth/signout') sign out
+  else
+    a(href='/auth/signin') sign in
+  
   h3 Project Steps 
   #checklist 
     input(type='checkbox' checked='')
@@ -20,7 +32,7 @@ block content
     input(type='checkbox')
     label Connect to IoT
 
-    input(type='checkbox' checked='')
+    input(type='checkbox')
     label Continuous Deployment with Github
 
     input(type='checkbox')
