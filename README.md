@@ -27,22 +27,22 @@
 
 ## Project Steps
 ##### (very, very rough draft)
-###### 1. Database
+###### Database
     1. Find & cleanse DB
-###### 2. App
+###### App
     1. Create Skeleton App
     2. Create login permissions (e.g., create users)
     3. Add sign-in features
     4. Connect to DB
     5. Read from database / read-only specific user data
-###### 2. AI
+###### AI
     1. Train data
     2. Create predictions
-###### 3. IoT (TBD)
+###### IoT (Device TBD)
     1. IoT device setup
     2. Send data to database
     3. Connect user-specific data
-###### 4. Storage
+###### Storage
     1. Create DB
     2. Connect to app
     3. Assign to various users
