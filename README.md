@@ -1,5 +1,8 @@
-# Notes 
+# T20
+## Application
 [Our App's Site](https://t20-app.azurewebsites.net/)
+
+## Notebook & Resources
 [T20 Notebook](https://microsoft-my.sharepoint.com/:o:/p/ashwinse/EogkyHHf01BPg6eagl_1lB0BNoCmUrUQUJMD_Ev7TIAf5g?e=bfvpi3)
 
 ## Specialities
