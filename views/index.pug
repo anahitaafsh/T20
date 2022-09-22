@@ -2,8 +2,16 @@ extends layout
 
 block content
   h1= title
-  p Welcome to our #{title}
-  h5 by Aayushi, Anahita, Ashwin, Melody, Rachel, and Zach
+  p Welcome to our #{title}!
+  div(id="names")
+    p by 
+    p(id="aayushi") Aayushi, 
+    p(id="ana") Anahita, 
+    p(id="ashwin") Ashwin, 
+    p(id="mel") Melody, 
+    p(id="rachel") Rachel, 
+    p and 
+    p(id="zach") Zach
   p 
     a(href='https://github.com/anahitaafsh/t20') Github Repo
     br
