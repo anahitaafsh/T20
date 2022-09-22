@@ -23,13 +23,16 @@ block content
   h3 Project Steps 
   #checklist 
     input(type='checkbox' checked='')
-    label Deploy to App Service
+    label(id="ana") Deploy to App Service
     
     input(type='checkbox')
     label Find Dataset
+
+    input(type='checkbox')
+    label Create frontend
     
     input(type='checkbox')
-    label Authenticate with Azure AD
+    label Authenticate users with Azure AD
 
     input(type='checkbox')
     label Clean and trim data
@@ -41,7 +44,7 @@ block content
     label Connect to IoT
 
     input(type='checkbox')
-    label Train AI
+    label(id='mel') Train AI/ML
 
     input(type='checkbox')
     label Create frontend

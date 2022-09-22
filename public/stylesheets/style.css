@@ -1,3 +1,23 @@
+@font-face {
+  font-family: ana;
+  src: url(ana-handwriting.ttf);
+}
+
+@font-face {
+  font-family: mel;
+  src: url(mel-handwriting.ttf);
+}
+
+#mel {
+  font: 35px "mel";
+  letter-spacing: -3px;
+}
+
+#ana {
+  font: 28px "ana";
+  letter-spacing: 1px;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
