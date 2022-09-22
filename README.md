@@ -9,7 +9,7 @@
 - AI/ML: Melody & Zach
 - App: Ana & Ashwin
 - Data: Aayushi, Rachel, & Melody
-- IoT:Aayushi & Rachel
+- IoT: Aayushi & Rachel
 - Security: Aayushi, Ana, & Zach
 
 ## Overall Concept:
