@@ -1,53 +1,55 @@
-# Notes 
+# T20
+## Application
 [Our App's Site](https://t20-app.azurewebsites.net/)
 
-## General Technologies
-(roughly speaking)
-- IoT: Rachel, Aayushi
-- AI: Melody, Zach
-- Security: Ana, Aayushi, Zach
-- App: Ana, Ashwin
-- Data: Rachel, Melody, Aayushi
+## Notebook & Resources
+[T20 Notebook](https://microsoft-my.sharepoint.com/:o:/p/ashwinse/EogkyHHf01BPg6eagl_1lB0BNoCmUrUQUJMD_Ev7TIAf5g?e=bfvpi3)
 
-## Basic idea:
-- there is an IoT device (most likely a fitness device)
-- IoT device has sensor that sends data (most likely heart rate/step/health data)
-- Data is stored somewhere
-- Data is processed with AI to create recommendations and predictions
-- Users login to see their specific data and predictions based on their data
+## Specialities
+- AI/ML: Melody & Zach
+- App: Ana & Ashwin
+- Data: Aayushi, Rachel, & Melody
+- IoT:Aayushi & Rachel
+- Security: Aayushi, Ana, & Zach
+
+## Overall Concept:
+- An IoT device based upon (maternal/breast cancer TBD) data
+- IoT device has sensors that ideally transmit data
+- Data is stored
+- Data is processed with AI to create predictions
+- Users login to see their specific data
 - Users use app via web
+- Data is health-based app data (specifics are TBD dependent upon DB)
 
 ## Timeline
-- Find usable dataset
-- Clean and trim data
-- Connect data to web app
-- Create web app frontend
-- Create web app login page
-- Secure web app (AAD and user access/permissions)
-- Connect to IoT device 
-- Gather data from IoT device 
+#### (needs updating)
+- TBD
 
 ## Project Steps
-##### (very, very roughly speaking, more to be added)
-###### (question marks are when I have 0 idea of what I am talking about, and haven't done research to know what actual steps are)
-1. App
-    1. Create Skeleton App (deploy to App Service and create basic frontend)
-    2. Create login permissions (aka create users)
-    3. Connect to database
-    4. Read from database / read only specific user data
-2. AI
-    1. Process data (trimming and cleaning)
-    2. Train data (?)
-    3. Create predictions (?)
-3. IoT
-    1. IoT device setup (?)
-    2. Send data to database (?)
-    3. Connect user-specific data (?)
-4. Storage
-    1. Create database
+##### (very, very rough draft)
+###### 1. Database
+    1. Find & cleanse DB
+###### 2. App
+    1. Create Skeleton App
+    2. Create login permissions (e.g., create users)
+    3. Add sign-in features
+    4. Connect to DB
+    5. Read from database / read-only specific user data
+###### 2. AI
+    1. Train data
+    2. Create predictions
+###### 3. IoT (TBD)
+    1. IoT device setup
+    2. Send data to database
+    3. Connect user-specific data
+###### 4. Storage
+    1. Create DB
     2. Connect to app
-    3. Assign to various users (?)
-    4. Process/manage data (?)
+    3. Assign to various users
+    4. Process & manage data
+
+## Original Project Proposal
+[Original T20 Proposal](https://microsoft-my.sharepoint.com/:w:/p/wanchenliu/EcsrYwyAj69AnhiXRGwDBh4BdOyCXd6ZhlzMOdW-g8Uldw?e=GXkAah)
 
 ## Resources
 [Amanda's Project's Github Repo](https://github.com/wongamanda/image-captioning)
