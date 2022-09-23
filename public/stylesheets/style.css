@@ -71,7 +71,7 @@
   padding: 20px;
 }
 
-#authbtn:link, #authbtn:visited {
+#btn:link, #btn:visited {
   background-color: white;
   color: var(--MSblue);
   border: 2px solid var(--MSblue);
@@ -81,7 +81,7 @@
   border-radius: 8px;
 }
 
-#authbtn:hover, #authbtn:active {
+#btn:hover, #btn:active {
   background-color: var(--MSblue);
   color: white;
   transition: all .5s ease 0s;

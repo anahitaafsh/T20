@@ -20,15 +20,15 @@ block content
   #authMenu
     if isAuthenticated
       h3 welcome #{username}!
-      a(id="authbtn" href='/users/id') view ID token claims
+      a(id="btn" href='/users/id') view ID token claims
       br
       br
-      a(id="authbtn" href='/auth/acquireToken') acquire token
+      a(id="btn" href='/auth/acquireToken') acquire token
       br
       br
-      a(id="authbtn" href='/auth/signout') sign out
+      a(id="btn" href='/auth/signout') sign out
     else
-      a(id="authbtn" href='/auth/signin') sign in
+      a(id="btn" href='/auth/signin') sign in
   
   h3 Project Steps 
   label#ana.container
