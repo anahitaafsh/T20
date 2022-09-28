@@ -54,15 +54,19 @@ TBD
 - Data is health-based app data (specifics are TBD dependent upon DB)
 
 ## Timeline
-#### (needs updating)
-- 10/3-10/7: First Sprint (architecture design: storage, IoT, security, web app)
-- Second Sprint
-- Third Sprint
-- Fourth Sprint
-- All development complete before December 
+### First Sprint (10/3 - 10/6) 
+- [ ] Architecture Design
+- [ ] Storage
+- [ ] Security
+- [ ] Web App
+### Second Sprint
+- [ ] IoT Device
+### Third Sprint
+### Fourth Sprint
+
+##### All development complete before Dec.
 
 ## Project Steps
-##### (very, very rough draft)
 
 #### Database
 - [X] Find & cleanse DB
