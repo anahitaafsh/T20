@@ -13,6 +13,8 @@ TBD
 ### Output and success metrics
 
 ### About the data
+* [Maternal Health Risk Dataset](https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data) (hosted on Kaggle) contains information of age, systolic blood pressure, diastolic blood pressure, blood glucose, heartrate and risk level from 1014 women. 
+* The data is collected from different hospitals and clinics. Risk level is classified by the experts.
 
 ### Modeling techniques
 
