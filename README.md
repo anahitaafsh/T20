@@ -15,11 +15,12 @@ TBD
 * Configure data storage for different components
 * Configure Azure Action Directory for the app and other security components
 
-### Output and success metrics
 
 ### About the data
 
 ### Modeling techniques
+* Classfication models: XGBoost, LightGBM, Random Forest models are tried out. Normalization tools including Standard Scaler, Sparse Normalizer, Max Abs Scaler are tested. Ensemble methods including voting and stacking are also used for improved accuracy.
+* Anomaly Detection models: Support Vector Machine, Decision Trees, and K Nearest Neighbor models are examined to find the optimal result.
 
 ### Execution stages
 
