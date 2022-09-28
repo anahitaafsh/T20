@@ -8,7 +8,12 @@ TBD
 
 ## Project Plan
 ### Objectives
-* Deploy Machine Learning model to predict maternal risk for users, based on the input and IoT data 
+* Build supervised Machine Learning models to predict maternal risk for users, based on the input and IoT data 
+* Deploy the optimal model based on the Precision/Recall rates of the training results
+* Deploy anomaly detection model and configure alert trigger
+* Connect IoT device to Azure IoT Central
+* Configure data storage for different components
+* Configure Azure Action Directory for the app and other security components
 
 ### Output and success metrics
 
