@@ -20,11 +20,10 @@ TBD
 * [Maternal Health Risk Dataset](https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data) (hosted on Kaggle) contains information of age, systolic blood pressure, diastolic blood pressure, blood glucose, heartrate and risk level from 1014 women. 
 * The data is collected from different hospitals and clinics. Risk level is classified by the experts.
 
+
 ### Modeling techniques
 * Classfication models: XGBoost, LightGBM, Random Forest models are tried out. Normalization tools including Standard Scaler, Sparse Normalizer, Max Abs Scaler are tested. Ensemble methods including voting and stacking are also used for improved accuracy.
 * Anomaly Detection models: Support Vector Machine, Decision Trees, and K Nearest Neighbor models are examined to find the optimal result.
-
-### Execution stages
 
 
 ### Software Frameworks
@@ -42,7 +41,7 @@ TBD
 - AI/ML: Melody & Zach
 - App: Ana & Ashwin
 - Data: Aayushi, Rachel, & Melody
-- IoT: Aayushi & Rachel
+- IoT: Aayushi, Rachel, & Melody 
 - Security: Aayushi, Ana, & Zach
 
 ## Overall Concept:
@@ -56,7 +55,11 @@ TBD
 
 ## Timeline
 #### (needs updating)
-- TBD
+- 10/3-10/7: First Sprint (architecture design: storage, IoT, security, web app)
+- Second Sprint
+- Third Sprint
+- Fourth Sprint
+- All development complete before December 
 
 ## Project Steps
 ##### (very, very rough draft)
