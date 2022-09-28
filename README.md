@@ -28,25 +28,25 @@
 ## Project Steps
 ##### (very, very rough draft)
 ###### Database
-    1. Find & cleanse DB
+- [X] Find & cleanse DB
 ###### App
-    1. Create Skeleton App
-    2. Create login permissions (e.g., create users)
-    3. Add sign-in features
-    4. Connect to DB
-    5. Read from database / read-only specific user data
+- [X] Create Skeleton App
+- [ ] Create login permissions (e.g., create users)
+- [ ] Add sign-in features
+- [ ] Connect to DB
+- [ ] Read from database / read-only specific user data
 ###### AI
-    1. Train data
-    2. Create predictions
+- [ ] Train data
+- [ ] Create predictions
 ###### IoT (Device TBD)
-    1. IoT device setup
-    2. Send data to database
-    3. Connect user-specific data
+- [ ] IoT device setup
+- [ ] Send data to database
+- [ ] Connect user-specific data
 ###### Storage
-    1. Create DB
-    2. Connect to app
-    3. Assign to various users
-    4. Process & manage data
+- [ ] Create DB
+- [ ] Connect to app
+- [ ] Assign to various users
+- [ ] Process & manage data
 
 ## Original Project Proposal
 [Original T20 Proposal](https://microsoft-my.sharepoint.com/:w:/p/wanchenliu/EcsrYwyAj69AnhiXRGwDBh4BdOyCXd6ZhlzMOdW-g8Uldw?e=GXkAah)
