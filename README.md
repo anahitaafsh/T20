@@ -8,15 +8,21 @@ TBD
 
 ## Project Plan
 ### Objectives
-* Deploy Machine Learning model to predict maternal risk for users, based on the input and IoT data 
+* Build supervised Machine Learning models to predict maternal risk for users, based on the input and IoT data 
+* Deploy the optimal model based on the Precision/Recall rates of the training results
+* Deploy anomaly detection model and configure alert trigger
+* Connect IoT device to Azure IoT Central
+* Configure data storage for different components
+* Configure Azure Action Directory for the app and other security components
 
-### Output and success metrics
 
 ### About the data
 * [Maternal Health Risk Dataset](https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data) (hosted on Kaggle) contains information of age, systolic blood pressure, diastolic blood pressure, blood glucose, heartrate and risk level from 1014 women. 
 * The data is collected from different hospitals and clinics. Risk level is classified by the experts.
 
 ### Modeling techniques
+* Classfication models: XGBoost, LightGBM, Random Forest models are tried out. Normalization tools including Standard Scaler, Sparse Normalizer, Max Abs Scaler are tested. Ensemble methods including voting and stacking are also used for improved accuracy.
+* Anomaly Detection models: Support Vector Machine, Decision Trees, and K Nearest Neighbor models are examined to find the optimal result.
 
 ### Execution stages
 
