@@ -1,16 +1,17 @@
 # Maternal Health (T20 Project)
 
 ## Introduction
-Through the Web application, we aim to help pregnant women daily track their maternal health and predict potential risk based on age, blood pressure, blood glucose and heart rate. The data is collected through both IoT device and user inputs. Dashboard is displayed for users to monitor the trend of their daily maternal health information and predicted risk level. Alerts are sent to users (through email/SMS) once abnormal trend or high risk factor occurs. 
+Through the Web application, we aim to help pregnant women track their maternal health and predict potential risk based on age, blood pressure, blood glucose and heart rate using a pre-trained classification machine learning model. The data is collected through both IoT device and user inputs. Dashboard is displayed for users to monitor the trend of their daily maternal health information and predicted risk level. Alerts are sent to users (through email/SMS) once abnormal measurement is detected. 
 
 ## Architecture Overview
 TBD
 
 ## Project Plan
 ### Objectives
-* Build supervised Machine Learning models to predict maternal risk for users, based on the input and IoT data 
-* Deploy the optimal model based on the Precision/Recall rates of the training results
-* Deploy anomaly detection model and configure alert trigger
+* Build supervised Machine Learning models to predict maternal risk for users, on the maternal health dataset
+* Deploy the optimal model based on the Precision/Recall rates of the training results to new data from input/IoT
+* Build the anomaly detection model on the maternal health dataset
+* Deploy the anomaly detection model on new data from input/IoT and configure alert trigger in the App
 * Connect IoT device to Azure IoT Central
 * Configure data storage for different components
 * Configure Azure Action Directory for the app and other security components
