@@ -1,25 +1,26 @@
 # Maternal Health (T20 Project)
 
 ## Introduction
-Through the Web application, we aim to help pregnant women track their maternal health and predict potential risk based on age, blood pressure, blood glucose and heart rate using a pre-trained classification machine learning model. The data is collected through both IoT device and user inputs. Dashboard is displayed for users to monitor the trend of their daily maternal health information and predicted risk level. Alerts are sent to users (through email/SMS) once abnormal measurement is detected. 
+Through the Web application, we aim to help pregnant women track their maternal health and predict potential risk based on age, blood pressure, blood glucose and heart rate using a pre-trained classification machine learning model. The user data is collected through both IoT device and inputs prompted through the app UI. Dashboard is displayed for users to monitor the trend of their maternal health metircs and predicted risk level on a daily basis. Alerts are sent to users (through SMS) once abnormal metric is detected. 
 
 ## Architecture Overview
 TBD
 
 ## Project Plan
 ### Objectives
-* Build supervised Machine Learning models to predict maternal risk for users, on the maternal health dataset
-* Deploy the optimal model based on the Precision/Recall rates of the training results to new data from input/IoT
-* Build the anomaly detection model on the maternal health dataset
-* Deploy the anomaly detection model on new data from input/IoT and configure alert trigger in the App
+* Build supervised Machine Learning models to predict maternal risk for users, on the existing dataset
+* Build an anomaly detection model on the maternal health dataset
+* Select and validate the optimal models based on the Precision/Recall rates 
+* Deploy the optimal models to new data from input/IoT
+* Configure the trigger in the App to send alert SMS
 * Connect IoT device to Azure IoT Central
 * Configure data storage for different components
 * Configure Azure Action Directory for the app and other security components
 
 
 ### About the data
-* [Maternal Health Risk Dataset](https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data) (hosted on Kaggle) contains information of age, systolic blood pressure, diastolic blood pressure, blood glucose, heartrate and risk level from 1014 women. 
-* The data is collected from different hospitals and clinics. Risk level is classified by the experts.
+* [Maternal Health Risk Dataset](https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data) (hosted on Kaggle) contains information of age, systolic blood pressure, diastolic blood pressure, blood glucose, heartrate and risk level from 1014 women. The data is collected from different hospitals and clinics. Risk level is classified by the experts.
+* Data from users for prediction and trend analysis is collected on a daily basis through IoT devices and user inputs through the App
 
 
 ### Modeling techniques
