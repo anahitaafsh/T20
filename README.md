@@ -55,12 +55,12 @@ TBD
 
 ## Timeline
 ### First Sprint (10/3 - 10/6) 
-- [ ] Architecture Design
-- [ ] Storage
-- [ ] Security
-- [ ] Web App
+- Architecture Design
+- Storage
+- Security
+- Web App
 ### Second Sprint
-- [ ] IoT Device
+- IoT Device
 ### Third Sprint
 ### Fourth Sprint
 
