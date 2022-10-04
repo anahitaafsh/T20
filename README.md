@@ -74,7 +74,7 @@ TBD
 - [X] Find & cleanse DB
 #### App
 - [X] Create Skeleton App
-- [ ] Create login permissions (e.g., create users)
+- [X] Create login permissions (e.g., create users)
 - [ ] Add sign-in features
 - [ ] Connect to DB
 - [ ] Read from database / read-only specific user data
