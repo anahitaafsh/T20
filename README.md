@@ -4,7 +4,7 @@
 Through the Web application, we aim to help pregnant women track their maternal health and predict potential risk based on age, blood pressure, blood glucose and heart rate using a pre-trained classification machine learning model. The user data is collected through both IoT device and inputs prompted through the app UI. Dashboard is displayed for users to monitor the trend of their maternal health metircs and predicted risk level on a daily basis. Alerts are sent to users (through SMS) once abnormal metric is detected. 
 
 ## Architecture Overview
-TBD
+![MicrosoftTeams-image2](https://user-images.githubusercontent.com/112658769/193882771-0dd2e1a8-2846-4884-83b5-2008f8361134.png)
 
 ## Project Plan
 ### Objectives
@@ -74,7 +74,7 @@ TBD
 - [X] Find & cleanse DB
 #### App
 - [X] Create Skeleton App
-- [ ] Create login permissions (e.g., create users)
+- [X] Create login permissions (e.g., create users)
 - [ ] Add sign-in features
 - [ ] Connect to DB
 - [ ] Read from database / read-only specific user data
