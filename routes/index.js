@@ -9,8 +9,6 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     res.render('index', {
         title: '2022 Aspire T20 Project',
-        isAuthenticated: req.session.isAuthenticated,
-        username: req.session.account?.username,
     });
 });
 

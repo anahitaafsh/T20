@@ -1,13 +1,10 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var authRouter = require('./routes/auth');
 var readmeRouter = require('./routes/readme');
 
 var app = express();
@@ -22,22 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-/**
- * Using express-session middleware for persistent user session. Be sure to
- * familiarize yourself with available options. Visit: https://www.npmjs.com/package/express-session
- */
- app.use(session({
-  secret: process.env.EXPRESS_SESSION_SECRET,
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-      secure: false, // set this to true on production
-  }
-}));
-
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/auth', authRouter);
 app.use('/readme', readmeRouter);
 
 // catch 404 and forward to error handler
