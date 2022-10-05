@@ -28,23 +28,3 @@ describe('Sanitize configuration object', () => {
         expect(msalConfig.auth.redirectUri).toBeDefined();
     });
 });
-
-describe('Ensure that the app starts', () => {
-    beforeAll(() => {
-        global.crypto = require('crypto');
-        global.msalConfig = require('./authConfig.js').msalConfig;
-        global.msalInstance = new PublicClientApplication(msalConfig);
-    
-        expect(msalInstance).toBeDefined();
-        expect(msalInstance).toBeInstanceOf(PublicClientApplication);
-    });
-
-    it('should render the app without crashing', () => {
-        const div = document.createElement('div');
-
-        act(() => {
-            ReactDOM.render(<App msalInstance={msalInstance} />, div);
-        });
-        expect(div.textContent).toBe("2022 Aspire T20 ProjectWelcome to the 2022 Aspire T20 Project!by AayushiAnahitaAshwin Melody  Rachel and ZachProject Steps Deploy to App ServiceFind DatasetCreate frontendAuthenticate users with Azure ADClean and trim dataConnect to IoTConnect to DatabaseContinuous Deployment with Github");
-    });
-});
