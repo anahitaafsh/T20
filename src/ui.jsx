@@ -72,7 +72,7 @@ export const PageLayout = (props) => {
             
             <h5>Project Steps </h5>
                 <label class="container" id="ana">Deploy to App Service
-                    <input type="checkbox" checked=""/><span class="checkmark"></span>
+                    <input type="checkbox" defaultChecked/><span class="checkmark"></span>
                 </label>
                 <label class="container" id="mel">Find Dataset
                     <input type="checkbox"/><span class="checkmark"></span>
@@ -93,7 +93,7 @@ export const PageLayout = (props) => {
                     <input type="checkbox"/><span class="checkmark"></span>
                 </label>
                 <label class="container" id="ana">Continuous Deployment with Github
-                    <input type="checkbox" checked=""/><span class="checkmark"></span>
+                    <input type="checkbox" defaultChecked/><span class="checkmark"></span>
                 </label>
         </>
     );
