@@ -9,3 +9,28 @@
   justify-content: center;
   text-align: left;
 }
+
+:root {
+  --MSblue: #01A6F0;
+  --MSgray: #747474;
+  --MSyellow: #FFBA01;
+  --MSgreen: #7FBC00;
+  --MSorange: #F34F1c;
+}
+
+.bg-primary {
+  background-color: var(--MSblue) !important;
+}
+
+.btn-warning {
+  background-color: var(--MSorange) !important;
+  color: white !important;
+}
+
+.btn-info {
+  background-color: var(--MSgreen) !important;
+}
+
+.btn-secondary {
+  background-color: var(--MSyellow) !important;
+}

@@ -29,6 +29,9 @@ const NavigationBar = () => {
     return (
         <>
             <AuthenticatedTemplate>
+                <div class="navLinks">
+                    <Button variant="secondary" onClick="window.open('https://github.com/anahitaafsh/t20')">Github</Button>
+                </div>
                 <div className="ml-auto">
                     <Button variant="info" onClick={() => instance.loginPopup(b2cPolicies.authorities.editProfile)} className="ml-auto">Edit Profile</Button>
                     <DropdownButton variant="warning" className="ml-auto" drop="left" title="Sign Out">
@@ -70,7 +73,7 @@ export const PageLayout = (props) => {
             {props.children}
             <br />
             
-            <h5>Project Steps </h5>
+            <h6>Project Steps </h6>
                 <label class="container" id="ana">Deploy to App Service
                     <input type="checkbox"/><span class="checkmark"></span>
                 </label>

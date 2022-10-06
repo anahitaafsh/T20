@@ -143,3 +143,12 @@ code {
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
+
+h6 {
+  font-size: 22px;
+  text-align: center;
+}
+
+.navLinks {
+  display: flex;
+}
