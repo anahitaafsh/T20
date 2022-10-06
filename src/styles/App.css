@@ -27,10 +27,15 @@
   color: white !important;
 }
 
+.btn-warning:hover {
+  background-color: #d7471b !important;
+  color: white !important;
+}
+
 .btn-info {
   background-color: var(--MSgreen) !important;
 }
 
-.btn-secondary {
-  background-color: var(--MSyellow) !important;
+.btn-info:hover, .btn-info:active, .btn-info:focus {
+  background-color: #6c9e00 !important;
 }

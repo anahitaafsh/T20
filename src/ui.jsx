@@ -30,7 +30,7 @@ const NavigationBar = () => {
         <>
             <AuthenticatedTemplate>
                 <div class="navLinks">
-                    <Button variant="secondary" onClick="window.open('https://github.com/anahitaafsh/t20')">Github</Button>
+                    <Button variant="secondary" onClick="location.href='https://github.com/anahitaafsh/t20'">Github</Button>
                 </div>
                 <div className="ml-auto">
                     <Button variant="info" onClick={() => instance.loginPopup(b2cPolicies.authorities.editProfile)} className="ml-auto">Edit Profile</Button>
@@ -41,6 +41,9 @@ const NavigationBar = () => {
                 </div>
             </AuthenticatedTemplate>
             <UnauthenticatedTemplate>
+                <div class="navLinks">
+                    <Button variant="secondary" onClick="location.href='https://github.com/anahitaafsh/t20'">Github</Button>
+                </div>
                 <DropdownButton variant="secondary" className="ml-auto" drop="left" title="Sign In">
                     <Dropdown.Item as="button" onClick={handleLogin}>Sign in using Popup</Dropdown.Item>
                     <Dropdown.Item as="button" onClick={() => instance.loginRedirect(loginRequest)}>Sign in using Redirect</Dropdown.Item>
