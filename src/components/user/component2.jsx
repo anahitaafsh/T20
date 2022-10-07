@@ -21,8 +21,12 @@ class Component2 extends React.Component{
         this.handleFetch();
     }
 
-    componentDidUpdate(){
+    sampleFetch(){
         
+    }
+
+    componentDidUpdate(){
+
     }
 
     render(){
