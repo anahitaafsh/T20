@@ -5,7 +5,8 @@ import { EventType, InteractionType } from "@azure/msal-browser";
 
 import { msalConfig, b2cPolicies } from "./authConfig";
 import { PageLayout, IdTokenClaims } from "./ui.jsx";
-
+import Component1 from "./components/user/component1.jsx";
+import Component2 from "./components/user/component2.jsx";
 import Button from "react-bootstrap/Button";
 import "./styles/App.css";
 
@@ -109,12 +110,23 @@ const MainContent = () => {
  * visit: https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/getting-started.md
  */
 export default function App({msalInstance}) {
+    let name = 'Microsoft';
+    let arr = ['Microsoft','Google','Apple'];
+
 
     return (
-        <MsalProvider instance={msalInstance}>
+        <div>
+         
+        Hello from App.jsx
+        
+              <Component2 x={name} y="5"/>  
+         
+         <MsalProvider instance={msalInstance}>
             <PageLayout>
                 <MainContent />
             </PageLayout>
-        </MsalProvider>
+</MsalProvider>  
+        </div>
+
     );
 }
