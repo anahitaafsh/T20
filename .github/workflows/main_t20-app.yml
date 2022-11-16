@@ -57,4 +57,3 @@ jobs:
           app-name: 't20-app'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_19AB50E10CFD41E293BBA9EEEB7EDFF6 }}
-          package: release.zip
