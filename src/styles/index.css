@@ -152,3 +152,9 @@ h6 {
 .navLinks {
   display: flex;
 }
+
+form {
+  border: 2px black;
+  padding: 30px;
+  text-align: center;
+}

@@ -7,9 +7,10 @@ import React from "react";
 
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from "@azure/msal-react";
 
-import { Navbar, Button, Dropdown, DropdownButton} from "react-bootstrap";
+import { Navbar, Button, Dropdown, DropdownButton, Nav} from "react-bootstrap";
 
 import { loginRequest, b2cPolicies } from "./authConfig";
+import { useState } from "react";
 
 const NavigationBar = () => {
 
@@ -27,7 +28,7 @@ const NavigationBar = () => {
     }
 
     return (
-        <>
+        <>        
             <AuthenticatedTemplate>
                 <div class="navLinks">
                     <Button variant="secondary" onClick="location.href='https://github.com/anahitaafsh/t20'">Github</Button>
@@ -54,10 +55,18 @@ const NavigationBar = () => {
 };
 
 export const PageLayout = (props) => {
+    //Variables for the form
+    const [name, setName] = useState('');
+    const handleNameChange = (e) => {
+        setName(e.target.value);
+    }
+
     return (
         <>
             <Navbar bg="primary" variant="dark">
                 <a className="navbar-brand" href="/">2022 Aspire T20 Project</a>
+                <Nav.Item><Nav.Link href = "/">Home</Nav.Link></Nav.Item>
+                <Nav.Item><Nav.Link href = "https://github.com/anahitaafsh/t20">GitHub1</Nav.Link></Nav.Item>
                 <NavigationBar />
             </Navbar>
             <br />
@@ -101,6 +110,14 @@ export const PageLayout = (props) => {
                 <label class="container" id="ana">Continuous Deployment with Github
                     <input type="checkbox"/><span class="checkmark"></span>
                 </label>
+
+            <form onSubmit={(e) => {handleSubmit(e)}}>
+                <label>
+                Name:
+                </label><br/>
+                <input type="text" value={name} required onChange={(e) => {handleNameChange(e)}} /><br/>
+                {}
+            </form>
         </>
     );
 };
