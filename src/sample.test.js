@@ -7,7 +7,7 @@ import { PublicClientApplication } from "@azure/msal-browser";
 
 describe('Sanitize configuration object', () => {
     beforeAll(() => {
-        global.msalConfig = require('./authConfig.js').msalConfig;
+        global.msalConfig = require('./components/msal/authConfig').msalConfig;
     });
 
     it('should define the config object', () => {
