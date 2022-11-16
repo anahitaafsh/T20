@@ -5,7 +5,9 @@
   "dependencies": {
     "@azure/msal-browser": "^2.29.0",
     "@azure/msal-react": "^1.4.8",
+    "@prisma/client": "^4.6.1",
     "bootstrap": "^4.6.2",
+    "create-next-app": "^13.0.3",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "react": "^17.0.0",
@@ -15,6 +17,7 @@
     "react-router-dom": "^5.3.3"
   },
   "devDependencies": {
+    "prisma": "^4.6.1",
     "react-scripts": "4.0.1"
   },
   "scripts": {
