@@ -1,0 +1,15 @@
+#entryForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+label {
+    margin: 0px 10px 0px 10px;
+}
+
+#submitBtn {
+    margin: 0px 0px 0px 20px;
+}

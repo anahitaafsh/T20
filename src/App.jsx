@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import { MsalProvider, AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from "@azure/msal-react";
 import { EventType, InteractionType } from "@azure/msal-browser";
 
-import { msalConfig, b2cPolicies } from "./authConfig";
-import { PageLayout, IdTokenClaims } from "./ui.jsx";
+import { msalConfig, b2cPolicies } from "./components/msal/authConfig";
+import { PageLayout } from "./ui.jsx";
+import IdTokenClaims from "./components//msal/idTokenClaims";
 
 import Button from "react-bootstrap/Button";
 import "./styles/App.css";
