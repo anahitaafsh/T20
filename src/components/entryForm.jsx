@@ -13,42 +13,72 @@ function EntryForm(props) {
     const [riskLevel, setRiskLevel] = useState('');
     
     const handleAgeChange = (e) => {
-        setAge(e.target.value);
+        if(isNaN(age)){
+            alert('Please enter a numerical value');
+        } else {
+            setAge(e.target.value);
+        }
     }
     
     const handleSystolicBPChange = (e) => {
-        setSystolicBP(e.target.value);
+        if(isNaN(systolicBP)){
+            alert('Please enter a numerical value');
+        } else {
+            setSystolicBP(e.target.value);
+        }
     }
    
     const handleDiastolicBPChange = (e) => {
-        setDiastolicBP(e.target.value);
+        if(isNaN(diastolicBP)){
+            alert('Please enter a numerical value');
+        } else {
+            setDiastolicBP(e.target.value);
+        }
     }
     
     const handleBSChange = (e) => {
-        setBS(e.target.value);
+        if(isNaN(bs)){
+            alert('Please enter a numerical value');
+        } else {
+            setBS(e.target.value);
+        }
     }
    
     const handleBodyTempChange = (e) => {
-        setBodyTemp(e.target.value);
+        if(isNaN(bodyTemp)){
+            alert('Please enter a numerical value');
+        } else {
+            setBodyTemp(e.target.value);
+        }
     }
    
     const handleHeartRateChange = (e) => {
-        setHeartRate(e.target.value);
+        if(isNaN(heartRate)){
+            alert('Please enter a numerical value');
+        } else {
+            setHeartRate(e.target.value);
+        }
     }
     
     const handleRiskLevelChange = (e) => {
-        setRiskLevel(e.target.value);
+        if(isNaN(riskLevel)){
+            alert('Please enter a numerical value');
+        } else {
+            setRiskLevel(e.target.value);
+        }
     }
    
     const handleSubmit = (e) => {
-        alert('An entry was submitted with the Age:' + age +', SystolicBP: ' + systolicBP + ', DiastolicBP' +
+        alert('An entry was submitted with the Age: ' + age +', SystolicBP: ' + systolicBP + ', DiastolicBP: ' +
         diastolicBP + ", Blood Sugar: " + bs + ", Body Temperature: " + bodyTemp + ", Heart Rate: " + heartRate + 
         ", and Risk Level: " + riskLevel);
     }
 
     return (
+        <>
         <form id="entryForm" onSubmit={(e) => {handleSubmit(e)}}>
-            <label>
+        <h6>Health Data Submission Form</h6><br/>
+            <br/><label>
             Age:
             </label><br/>
             <input type="text" value={age} required onChange={(e) => {handleAgeChange(e)}} /><br/>
@@ -92,6 +122,7 @@ function EntryForm(props) {
 
             <br/><input id="submitBtn" type="submit" value="Submit"/>
         </form>
+        </>
     )
 }
 
