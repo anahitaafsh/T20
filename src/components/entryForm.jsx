@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from 'react';
+const axios = require('axios').default;
 import '../styles/entryForm.css';
 
 function EntryForm(props) {
@@ -68,10 +69,23 @@ function EntryForm(props) {
         }
     }
    
-    const handleSubmit = (e) => {
-        alert('An entry was submitted with the Age: ' + age +', SystolicBP: ' + systolicBP + ', DiastolicBP: ' +
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        console.log('An entry was submitted with the Age: ' + age +', SystolicBP: ' + systolicBP + ', DiastolicBP: ' +
         diastolicBP + ", Blood Sugar: " + bs + ", Body Temperature: " + bodyTemp + ", Heart Rate: " + heartRate + 
         ", and Risk Level: " + riskLevel);
+        const response = await axios.post('http://localhost:4000/test', 
+            {
+                age:age, 
+                systolicBP, 
+                diastolicBP, 
+                BS:bs, 
+                bodyTemp, 
+                heartRate, 
+                riskLevel
+        });
+        console.log(response);
+
     }
 
     return (

@@ -21,7 +21,7 @@ function NavBar(props) {
         return (
             <>        
                 <AuthenticatedTemplate>
-                    <div class="navLinks">
+                    <div className="navLinks">
                         <Button variant="secondary" onClick="location.href='https://github.com/anahitaafsh/t20'">Github</Button>
                     </div>
                     <div className="ml-auto">
@@ -33,7 +33,7 @@ function NavBar(props) {
                     </div>
                 </AuthenticatedTemplate>
                 <UnauthenticatedTemplate>
-                    <div class="navLinks">
+                    <div className="navLinks">
                         <Button variant="secondary" onClick="location.href='https://github.com/anahitaafsh/t20'">Github</Button>
                     </div>
                     <DropdownButton variant="secondary" className="ml-auto" drop="left" title="Sign In">
