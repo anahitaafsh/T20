@@ -76,20 +76,22 @@ TBD
 - [X] Create Skeleton App
 - [X] Create login permissions (e.g., create users)
 - [ ] Add sign-in features
-- [ ] Connect to DB
-- [ ] Read from database / read-only specific user data
+- [X] Connect to DB
+- [X] Read from database / read-only specific user data
+- [ ] Display user data on UI
+- [X] Configure Web App Gateway
+- [X] Configure network security features (e.g., WAF)
 #### AI
-- [ ] Train data
-- [ ] Create predictions
-#### IoT (Device TBD)
-- [ ] IoT device setup
-- [ ] Send data to database
-- [ ] Connect user-specific data
+- [X] Train data
+- [X] Find optimal models
+- [X] Create predictions
+- [X] Deploy & test models
 #### Storage
-- [ ] Create DB
-- [ ] Connect to app
-- [ ] Assign to various users
+- [X] Create DB
+- [X] Connect to app
 - [ ] Process & manage data
+#### Future Considerations
+- [ ] TBD
 
 ## Original Project Proposal
 [Original T20 Proposal](https://microsoft-my.sharepoint.com/:w:/p/wanchenliu/EcsrYwyAj69AnhiXRGwDBh4BdOyCXd6ZhlzMOdW-g8Uldw?e=GXkAah)
