@@ -13,7 +13,6 @@ Through the Web application, we aim to help pregnant women track their maternal 
 * Select and validate the optimal models based on the Precision/Recall rates 
 * Deploy the optimal models to new data from input/IoT
 * Configure the trigger in the App to send alert SMS
-* Connect IoT device to Azure IoT Central
 * Configure data storage for different components
 * Configure Azure Action Directory for the app and other security components
 
@@ -24,7 +23,7 @@ Through the Web application, we aim to help pregnant women track their maternal 
 
 
 ### Modeling techniques
-* Classfication models: XGBoost, LightGBM, Random Forest models are tried out. Normalization tools including Standard Scaler, Sparse Normalizer, Max Abs Scaler are tested. Ensemble methods including voting and stacking are also used for improved accuracy.
+* Classfication Models: XGBoost, LightGBM, Random Forest models are tried out. Normalization tools including Standard Scaler, Sparse Normalizer, Max Abs Scaler are tested. Ensemble methods including voting and stacking are also used for improved accuracy.
 * Anomaly Detection models: Support Vector Machine, Decision Trees, and K Nearest Neighbor models are examined to find the optimal result.
 
 
