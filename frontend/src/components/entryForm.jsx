@@ -11,7 +11,7 @@ function EntryForm(props) {
     const [bs, setBS] = useState('');
     const [bodyTemp, setBodyTemp] = useState('');
     const [heartRate, setHeartRate] = useState('');
-    const [riskLevel, setRiskLevel] = useState('');
+    // const [riskLevel, setRiskLevel] = useState('');
     
     const handleAgeChange = (e) => {
         if(isNaN(age)){
@@ -61,19 +61,18 @@ function EntryForm(props) {
         }
     }
     
-    const handleRiskLevelChange = (e) => {
-        if(isNaN(riskLevel)){
-            alert('Please enter a numerical value');
-        } else {
-            setRiskLevel(e.target.value);
-        }
-    }
+    // const handleRiskLevelChange = (e) => {
+    //     if(isNaN(riskLevel)){
+    //         alert('Please enter a numerical value');
+    //     } else {
+    //         setRiskLevel(e.target.value);
+    //     }
+    // }
    
     const handleSubmit = async (e) => {
         e.preventDefault()
         console.log('An entry was submitted with the Age: ' + age +', SystolicBP: ' + systolicBP + ', DiastolicBP: ' +
-        diastolicBP + ", Blood Sugar: " + bs + ", Body Temperature: " + bodyTemp + ", Heart Rate: " + heartRate + 
-        ", and Risk Level: " + riskLevel);
+        diastolicBP + ", Blood Sugar: " + bs + ", Body Temperature: " + bodyTemp + ", Heart Rate: " + heartRate);
         const response = await axios.post('http://localhost:4000/test', 
             {
                 age:age, 
@@ -82,7 +81,7 @@ function EntryForm(props) {
                 BS:bs, 
                 bodyTemp, 
                 heartRate, 
-                riskLevel
+                // riskLevel
         });
         console.log(response);
 
@@ -128,11 +127,11 @@ function EntryForm(props) {
             <input type="text" value={heartRate} required onChange={(e) => {handleHeartRateChange(e)}} /><br/>
             {}
 
-            <br/><label>
+            {/* <br/><label>
             RiskLevel:
             </label><br/>
             <input type="text" value={riskLevel} required onChange={(e) => {handleRiskLevelChange(e)}} /><br/>
-            {}
+            {} */}
 
             <br/><input id="submitBtn" type="submit" value="Submit"/>
         </form>
