@@ -34,16 +34,17 @@ TBD
 
 
 ## Application
-[Our App's Site](https://t20-app.azurewebsites.net/)
+[Our App's Site](https://t20-app.azurewebsites.net/) (*In Development*)
 
 ## Notebook & Resources
 [T20 Notebook](https://microsoft-my.sharepoint.com/:o:/p/ashwinse/EogkyHHf01BPg6eagl_1lB0BNoCmUrUQUJMD_Ev7TIAf5g?e=bfvpi3)
 
 ## Specialities
-- AI/ML: Melody & Zach
+- AI/ML: Melody
 - App: Ana & Ashwin
-- Data: Aayushi, Rachel, & Melody
-- IoT: Aayushi, Rachel, & Melody 
+- Data: Rachel, & Melody
+- Networking: Zach
+- IoT: Aayushi?
 - Security: Aayushi, Ana, & Zach
 
 ## Overall Concept:
@@ -56,15 +57,18 @@ TBD
 - Data is health-based app data (specifics are TBD dependent upon DB)
 
 ## Timeline
-### First Sprint (10/3 - 10/6) 
+### First Sprint (10/3 - 10/7)
 - Architecture Design
-- Storage
-- Security
-- Web App
-### Second Sprint
-- IoT Device
-### Third Sprint
-### Fourth Sprint
+- Database
+- Deploy Web App (i.e., front-end)
+- Security (i.e., AAD B2C sign-in)
+### Second Sprint (11/10 - 11/21)
+- Network Security (e.g., Application Gateway, WAF, NSGs)
+- Deploy new UI
+- Deploy ML Model   
+- Connect Database with Web App
+### Third Sprint (11/30 - 12/9)
+- TBD
 
 ##### All development complete before Dec.
 
@@ -80,7 +84,7 @@ TBD
 - [X] Read from database / read-only specific user data
 - [ ] Display user data on UI
 - [X] Configure Web App Gateway
-- [X] Configure network security features (e.g., WAF)
+- [X] Configure network security features (e.g., NSGs, WAF)
 #### AI
 - [X] Train data
 - [X] Find optimal models
