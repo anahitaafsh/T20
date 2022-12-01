@@ -1,0 +1,6 @@
+hi future ana this folder is with the old .yml file for 
+the old t20-app, but it kept deploying to there and you 
+wanted to test just the new app you created and kept 
+getting confused at all the actions anyways it's right 
+here, just put it back in .github/workflows when you 
+want to use it again etc etc 
