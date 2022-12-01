@@ -75,7 +75,7 @@ TBD
 
 #### Database
 - [X] Find & cleanse DB
-#### App
+#### App & Security
 - [X] Create Skeleton App
 - [X] Create login permissions (e.g., create users)
 - [ ] Add sign-in features
