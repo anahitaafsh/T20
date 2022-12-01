@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - t20-app
+name: Build and deploy Node.js app to Azure Web App
 
 on:
   push:
@@ -34,5 +34,4 @@ jobs:
         with:
           app-name: 't20-frontend'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_00111D23BBC548869A85A42A76C2C754 }}
-          package: .
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
