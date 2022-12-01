@@ -34,4 +34,5 @@ jobs:
         with:
           app-name: 't20-frontend'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_00111D23BBC548869A85A42A76C2C754 }}
+          package: .
