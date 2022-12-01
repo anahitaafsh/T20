@@ -3,10 +3,10 @@ const bodyParser = require('body-parser')
 const sql = require('mssql');
 const cors = require('cors');
 const app = express();
+const {getAnomaly, getRiskLevel} = require('./aml-api');
 app.use(bodyParser.json());
 app.use(cors());
 
-const axios = require('axios').default;
 
 // const sp_tenant_id = '16b3c013-d300-468d-ac64-7eda0820b6d3';
 // const sp_client_id = '3c052c87-077c-49ab-9a33-49ce629a8641';
@@ -25,7 +25,7 @@ const sql_config = {
     //;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
 }
 sql.connect(sql_config)
-    .then(x=>console.log('sql connected'))
+    .then(x=>console.log('endpoint connected'))
     .catch(err=>console.error(err));
 
 app.use((req, res, next)=>{
@@ -61,78 +61,34 @@ app.get('/predict',async (req,res)=>{
 app.post('/test',async (req,res)=>{
     //let userId = '5; drop table User'
     // ORM - object realtion mapping
-    console.log(req.body);
+    //console.log(req.body);
     const {age, systolicBP, diastolicBP, BS, bodyTemp, heartRate, riskLevel} = req.body
     try{
         const qry = `insert into Test values
-        ('${age}','${systolicBP}','${diastolicBP}', '${BS}', '${bodyTemp}', '${heartRate}', '${riskLevel}')`;
+        ('${age}','${systolicBP}','${diastolicBP}', '${BS}', '${bodyTemp}', '${heartRate}')`;
         console.log(qry);
         const result = await sql.query(qry);
         res.json({result})
     }
     catch(e){
-        console.error(e);
-        res.json({error:e})
+        console.error('error happend');
+        res.json({error:e}).status(500);
     }
 });
 
 
-
-const endpoint_risklevel = 'https://maternal-base01.centralus.inference.ml.azure.com/score';
-const key_risklevel = 'S3hpEaDu5MyduAkj5Afvwnj7ivaeKxEG';
-const endpoint_hr = 'http://a8acc6a6-5bc3-4548-acda-c4d70182217e.centralus.azurecontainer.io/score';
-const key_hr = '';
-function getData(data) {
-    const index = Array.from({ length: data.length });
-    const ans = {
-        "input_data": {
-            "columns": ["Age", "SystolicBP", "DiastolicBP", "BS", "BodyTemp", "HeartRate"],
-            index, data
-        }
-    }
-    return ans;
-}
-
-
-// async function getRiskLevel(input) {
-//     const headers = { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + key_risklevel, 'azureml-model-deployment': 'default' }
-//     const inputArray = input // convert json to array
-//     const data = getData([
-//         inputArray,
-//     ]);
-//     try {
-//         const res = await axios.post(endpoint_risklevel, data, { headers });
-//         console.log(res.status);
-//         console.log(res.data);
-//         return res.data[0];
-//     }
-//     catch (e) {
-//         console.log(e);
-//     }
-// }
-
-async function getAnomalyHr(input_hr) {
-    const headers = { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + key_hr, 'azureml-model-deployment': 'default' }
-    const inputArray = input // convert json to array
-    const data = getData([
-        inputArray,
-    ]);
-    try {
-        const res = await axios.post(endpoint_hr, data, { headers });
-        console.log(res.status);
-        console.log(res.data);
-        return res.data[0];
-    }
-    catch (e) {
-        console.log(e);
-    }
-}
-
-
 app.post('/predict', async(req,res)=>{
-    const input = req.body;
+    // const input = req.body;
+    const input = req.body
+    for (let key in input)
+        input[key]=parseFloat(input[key])
+
+    console.log(input);
+    
     //const risk_level = await getRiskLevel(input);
-    const anomaly_hr = await getAnomalyHr(input.heartRate);
+    const anomaly_hr = await getAnomaly('heartRate', input.heartRate);
+    const anomaly_age = await getAnomaly('age', input.age);
+    const riskLevel = await getRiskLevel(input)
     //....
 
     //alternative: parallel fetch
@@ -144,14 +100,15 @@ app.post('/predict', async(req,res)=>{
     // const risk_level = results[0];
     // const anomaly_hr = results[1];
 
-    const qry = `INSERT INTO [tbl] VALUES 
+    const qry = `INSERT INTO [Test] VALUES 
     (${input.age},...., ${anomaly_hr}, ...)`
     res.json({
-        //risk_level,
+        riskLevel,
         anomaly_hr, 
+        anomaly_age,
         //...
     });
-    await sql.query(qry);
+    //await sql.query(qry);
     return;
 })
 

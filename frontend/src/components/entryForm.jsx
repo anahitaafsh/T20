@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from 'react';
 const axios = require('axios').default;
 import '../styles/entryForm.css';
+import { useEffect } from "react";
 
 function EntryForm(props) {
     //Variables for the form
@@ -11,7 +12,9 @@ function EntryForm(props) {
     const [bs, setBS] = useState('');
     const [bodyTemp, setBodyTemp] = useState('');
     const [heartRate, setHeartRate] = useState('');
+    const [apiResult, setApiResult ] = useState({riskLevel:null, anomaly_hr:null})
     // const [riskLevel, setRiskLevel] = useState('');
+  
     
     const handleAgeChange = (e) => {
         if(isNaN(age)){
@@ -73,7 +76,7 @@ function EntryForm(props) {
         e.preventDefault()
         console.log('An entry was submitted with the Age: ' + age +', SystolicBP: ' + systolicBP + ', DiastolicBP: ' +
         diastolicBP + ", Blood Sugar: " + bs + ", Body Temperature: " + bodyTemp + ", Heart Rate: " + heartRate);
-        const response = await axios.post('http://localhost:4000/test', 
+        const response = await axios.post('http://localhost:4000/predict', 
             {
                 age:age, 
                 systolicBP, 
@@ -84,7 +87,8 @@ function EntryForm(props) {
                 // riskLevel
         });
         console.log(response);
-
+        setApiResult({riskLevel: response.riskLevel, anomaly_hr: response.anomaly_hr});
+        console.log({apiResult, setApiResult});
     }
 
     return (
@@ -125,7 +129,7 @@ function EntryForm(props) {
             HeartRate:
             </label><br/>
             <input type="text" value={heartRate} required onChange={(e) => {handleHeartRateChange(e)}} /><br/>
-            {}
+            { apiResult.anomaly_hr==-1 && <span >! anomaly</span> }
 
             {/* <br/><label>
             RiskLevel:
