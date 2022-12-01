@@ -4,7 +4,7 @@
 Through the Web application, we aim to help pregnant women track their maternal health and predict potential risk based on age, blood pressure, blood glucose and heart rate using a pre-trained classification machine learning model. The user data is collected through both IoT device and inputs prompted through the app UI. Dashboard is displayed for users to monitor the trend of their maternal health metircs and predicted risk level on a daily basis. Alerts are sent to users (through SMS) once abnormal metric is detected. 
 
 ## Architecture Overview
-![MicrosoftTeams-image (2)1](frontend/diagrams/T20_ADS_V2.drawio.png)
+![MicrosoftTeams-image (2)1](diagrams/T20_ADS_V2.drawio.png)
 
 ## Project Plan
 ### Objectives
@@ -13,7 +13,6 @@ Through the Web application, we aim to help pregnant women track their maternal 
 * Select and validate the optimal models based on the Precision/Recall rates 
 * Deploy the optimal models to new data from input/IoT
 * Configure the trigger in the App to send alert SMS
-* Connect IoT device to Azure IoT Central
 * Configure data storage for different components
 * Configure Azure Action Directory for the app and other security components
 
@@ -24,7 +23,7 @@ Through the Web application, we aim to help pregnant women track their maternal 
 
 
 ### Modeling techniques
-* Classfication models: XGBoost, LightGBM, Random Forest models are tried out. Normalization tools including Standard Scaler, Sparse Normalizer, Max Abs Scaler are tested. Ensemble methods including voting and stacking are also used for improved accuracy.
+* Classfication Models: XGBoost, LightGBM, Random Forest models are tried out. Normalization tools including Standard Scaler, Sparse Normalizer, Max Abs Scaler are tested. Ensemble methods including voting and stacking are also used for improved accuracy.
 * Anomaly Detection models: Support Vector Machine, Decision Trees, and K Nearest Neighbor models are examined to find the optimal result.
 
 
@@ -34,16 +33,17 @@ TBD
 
 
 ## Application
-[Our App's Site](https://t20-app.azurewebsites.net/)
+[Our App's Site](https://t20-app.azurewebsites.net/) (*In Development*)
 
 ## Notebook & Resources
 [T20 Notebook](https://microsoft-my.sharepoint.com/:o:/p/ashwinse/EogkyHHf01BPg6eagl_1lB0BNoCmUrUQUJMD_Ev7TIAf5g?e=bfvpi3)
 
 ## Specialities
-- AI/ML: Melody & Zach
+- AI/ML: Melody
 - App: Ana & Ashwin
-- Data: Aayushi, Rachel, & Melody
-- IoT: Aayushi, Rachel, & Melody 
+- Data: Rachel, & Melody
+- Networking: Zach
+- IoT: Aayushi?
 - Security: Aayushi, Ana, & Zach
 
 ## Overall Concept:
@@ -56,15 +56,18 @@ TBD
 - Data is health-based app data (specifics are TBD dependent upon DB)
 
 ## Timeline
-### First Sprint (10/3 - 10/6) 
+### First Sprint (10/3 - 10/7)
 - Architecture Design
-- Storage
-- Security
-- Web App
-### Second Sprint
-- IoT Device
-### Third Sprint
-### Fourth Sprint
+- Database
+- Deploy Web App (i.e., front-end)
+- Security (i.e., AAD B2C sign-in)
+### Second Sprint (11/10 - 11/21)
+- Network Security (e.g., Application Gateway, WAF, NSGs)
+- Deploy new UI
+- Deploy ML Model   
+- Connect Database with Web App
+### Third Sprint (11/30 - 12/9)
+- TBD
 
 ##### All development complete before Dec.
 
@@ -72,7 +75,7 @@ TBD
 
 #### Database
 - [X] Find & cleanse DB
-#### App
+#### App & Security
 - [X] Create Skeleton App
 - [X] Create login permissions (e.g., create users)
 - [ ] Add sign-in features
@@ -80,7 +83,7 @@ TBD
 - [X] Read from database / read-only specific user data
 - [ ] Display user data on UI
 - [X] Configure Web App Gateway
-- [X] Configure network security features (e.g., WAF)
+- [X] Configure network security features (e.g., NSGs, WAF)
 #### AI
 - [X] Train data
 - [X] Find optimal models
