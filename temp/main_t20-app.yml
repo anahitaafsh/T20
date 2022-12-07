@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,31 +24,19 @@ jobs:
 
       - name: npm install, build, and test
         run: |
+          cd ./frontend
           npm install
           npm run build --if-present
-          npm run test --if-present
+      # npm run test --if-present
       
       # - name: Zip artifact for deployment
       #   run: zip release.zip ./* -qr
 
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
-        with:
-          name: node-app
-          path: .
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
-        with:
-          name: node-app
+      # - name: Upload artifact for deployment job
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: node-app
+      #     path: .
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -57,3 +45,19 @@ jobs:
           app-name: 't20-app'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_19AB50E10CFD41E293BBA9EEEB7EDFF6 }}
+
+
+  # deploy:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   environment:
+  #     name: 'Production'
+  #     url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    # steps:
+      # - name: Download artifact from build job
+      #   uses: actions/download-artifact@v2
+      #   with:
+      #     name: node-app
+
+     
