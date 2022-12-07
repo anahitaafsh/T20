@@ -62,7 +62,7 @@ app.post('/test',async (req,res)=>{
     //let userId = '5; drop table User'
     // ORM - object realtion mapping
     //console.log(req.body);
-    const {age, systolicBP, diastolicBP, BS, bodyTemp, heartRate, riskLevel} = req.body
+    const {age, systolicBP, diastolicBP, BS, bodyTemp, heartRate} = req.body
     try{
         const qry = `insert into Test values
         ('${age}','${systolicBP}','${diastolicBP}', '${BS}', '${bodyTemp}', '${heartRate}')`;
@@ -87,8 +87,12 @@ app.post('/predict', async(req,res)=>{
     
     //const risk_level = await getRiskLevel(input);
     const anomaly_hr = await getAnomaly('heartRate', input.heartRate);
-    const anomaly_age = await getAnomaly('age', input.age);
-    const riskLevel = await getRiskLevel(input)
+    const anomaly_bs = await getAnomaly('BS', input.BS);
+    const anomaly_sbp = await getAnomaly('Systolic BP', input.systolicBP);
+    const anomaly_dbp = await getAnomaly('Diastolic BP', input.diastolicBP);
+    const anomaly_bodyTemp = await getAnomaly('Body Temp', input.bodyTemp)
+    //const anomaly_age = await getAnomaly('age', input.age);
+    const riskLevel = await getRiskLevel(input);
     //....
 
     //alternative: parallel fetch
@@ -101,11 +105,15 @@ app.post('/predict', async(req,res)=>{
     // const anomaly_hr = results[1];
 
     const qry = `INSERT INTO [Test] VALUES 
-    (${input.age},...., ${anomaly_hr}, ...)`
+    (${input.age},...., ${anomaly_hr}, ${anomaly_bs}, ${anomaly_sbp}, ${anomaly_dbp}, ${anomaly_bodyTemp})`
     res.json({
         riskLevel,
         anomaly_hr, 
-        anomaly_age,
+        anomaly_bs,
+        anomaly_sbp,
+        anomaly_dbp,
+        anomaly_bodyTemp,
+        //anomaly_age,
         //...
     });
     //await sql.query(qry);

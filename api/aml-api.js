@@ -3,10 +3,10 @@ const axios = require('axios').default;
 const ENDPOINT={
     riskLevel:'https://maternal-base01.centralus.inference.ml.azure.com/score',
     age:'', 
-    systolicBP:'', 
-    diastolicBP:'', 
+    systolicBP:'http://48cb156a-7c68-48eb-ae79-a80fa680b189.centralus.azurecontainer.io/score', 
+    diastolicBP:'http://752ca7bd-8a0a-4184-81e9-9727c4c8b15d.centralus.azurecontainer.io/score', 
     BS:'http://877cafc8-2a81-4229-a1ac-9f0b6b42bc64.centralus.azurecontainer.io/score', 
-    bodyTemp:'', 
+    bodyTemp:'http://2a50aaa6-f0c8-4c6b-8b4e-caca949947b2.centralus.azurecontainer.io/score', 
     heartRate:'http://a8acc6a6-5bc3-4548-acda-c4d70182217e.centralus.azurecontainer.io/score', 
 }
 const AUTH_KEY={
@@ -33,6 +33,7 @@ async function getAnomaly(metricName, value ) {
     const data = {data:[[value]] };
     try {
         const res = await axios.post(endpoint, data, { headers });
+        console.log(`VALUE: ${res}`)
         return res.data[0];
     }
     catch (e) {

@@ -14,6 +14,8 @@ function EntryForm(props) {
     const [heartRate, setHeartRate] = useState('');
     const [apiResult, setApiResult ] = useState({riskLevel:null, anomaly_hr:null})
     // const [riskLevel, setRiskLevel] = useState('');
+
+    useEffect(()=>{}, []);
   
     
     const handleAgeChange = (e) => {
