@@ -88,9 +88,9 @@ app.post('/predict', async(req,res)=>{
     //const risk_level = await getRiskLevel(input);
     const anomaly_hr = await getAnomaly('heartRate', input.heartRate);
     const anomaly_bs = await getAnomaly('BS', input.BS);
-    const anomaly_sbp = await getAnomaly('Systolic BP', input.systolicBP);
-    const anomaly_dbp = await getAnomaly('Diastolic BP', input.diastolicBP);
-    const anomaly_bodyTemp = await getAnomaly('Body Temp', input.bodyTemp)
+    const anomaly_sbp = await getAnomaly('systolicBP', input.systolicBP);
+    const anomaly_dbp = await getAnomaly('diastolicBP', input.diastolicBP);
+    const anomaly_bodyTemp = await getAnomaly('bodyTemp', input.bodyTemp)
     //const anomaly_age = await getAnomaly('age', input.age);
     const riskLevel = await getRiskLevel(input);
     //....
@@ -104,8 +104,6 @@ app.post('/predict', async(req,res)=>{
     // const risk_level = results[0];
     // const anomaly_hr = results[1];
 
-    const qry = `INSERT INTO [Test] VALUES 
-    (${input.age},...., ${anomaly_hr}, ${anomaly_bs}, ${anomaly_sbp}, ${anomaly_dbp}, ${anomaly_bodyTemp})`
     res.json({
         riskLevel,
         anomaly_hr, 
@@ -116,7 +114,18 @@ app.post('/predict', async(req,res)=>{
         //anomaly_age,
         //...
     });
-    //await sql.query(qry);
+
+    // writing results to database
+    
+    const qry = `INSERT INTO [maternal](
+        age, bs, systolicBP, diastolicBP, BodyTemp, heartRate, 
+        anomaly_sbp, anomaly_dbp, anomaly_bs, anomaly_bt, anomaly_hr,
+        riskLevel
+    )  VALUES 
+    (${input.age}, ${input.BS}, ${input.systolicBP}, ${input.diastolicBP}, ${input.bodyTemp}, ${input.heartRate},
+    ${anomaly_sbp}, ${anomaly_dbp},${anomaly_bs}, ${anomaly_bodyTemp}, ${anomaly_hr}, '${riskLevel}')`;
+    console.log(qry);
+    await sql.query(qry);
     return;
 })
 

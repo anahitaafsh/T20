@@ -12,7 +12,15 @@ function EntryForm(props) {
     const [bs, setBS] = useState('');
     const [bodyTemp, setBodyTemp] = useState('');
     const [heartRate, setHeartRate] = useState('');
-    const [apiResult, setApiResult ] = useState({riskLevel:null, anomaly_hr:null})
+    const [apiResult, setApiResult ] = useState({
+        anomaly_bodyTemp:null,
+        anomaly_bs:null, 
+        anomaly_dbp:null,
+        anomaly_hr:null,
+        anomaly_sbp:null,
+        riskLevel:null,
+    });
+    console.log(apiResult);
     // const [riskLevel, setRiskLevel] = useState('');
 
     useEffect(()=>{}, []);
@@ -88,9 +96,8 @@ function EntryForm(props) {
                 heartRate, 
                 // riskLevel
         });
-        console.log(response);
-        setApiResult({riskLevel: response.riskLevel, anomaly_hr: response.anomaly_hr});
-        console.log({apiResult, setApiResult});
+        console.log(response.data);
+        setApiResult(response.data);
     }
 
     return (
@@ -101,43 +108,46 @@ function EntryForm(props) {
             Age:
             </label><br/>
             <input type="text" value={age} required onChange={(e) => {handleAgeChange(e)}} /><br/>
-            {}
 
             <br/><label>
             SystolicBP:
             </label><br/>
-            <input type="text" value={systolicBP} required onChange={(e) => {handleSystolicBPChange(e)}} /><br/>
-            {}
+            <input type="text" value={systolicBP} required onChange={(e) => {handleSystolicBPChange(e)}} />
+            {apiResult.anomaly_sbp==-1 && <span>!!</span>}
+            <br/>
 
             <br/><label>
             DiastolicBP:
             </label><br/>
-            <input type="text" value={diastolicBP} required onChange={(e) => {handleDiastolicBPChange(e)}} /><br/>
-            {}
+            <input type="text" value={diastolicBP} required onChange={(e) => {handleDiastolicBPChange(e)}} />
+            {apiResult.anomaly_dbp==-1 && <span>!!</span>}
+            <br/>
 
             <br/><label>
             BS:
             </label><br/>
-            <input type="text" value={bs} required onChange={(e) => {handleBSChange(e)}} /><br/>
-            {}
+            <input type="text" value={bs} required onChange={(e) => {handleBSChange(e)}} />
+            {apiResult.anomaly_bs==-1 && <span>!!</span>}
+            <br/>
 
             <br/><label>
             BodyTemp:
             </label><br/>
-            <input type="text" value={bodyTemp} required onChange={(e) => {handleBodyTempChange(e)}} /><br/>
-            {}
+            <input type="text" value={bodyTemp} required onChange={(e) => {handleBodyTempChange(e)}} />
+            {apiResult.anomaly_bodyTemp==-1 && <span>!!</span>}
+            <br/>
 
             <br/><label>
             HeartRate:
             </label><br/>
             <input type="text" value={heartRate} required onChange={(e) => {handleHeartRateChange(e)}} /><br/>
-            { apiResult.anomaly_hr==-1 && <span >! anomaly</span> }
+            { apiResult.anomaly_hr==-1 && <span >!!</span> }
 
-            {/* <br/><label>
+            <br/><label>
             RiskLevel:
             </label><br/>
-            <input type="text" value={riskLevel} required onChange={(e) => {handleRiskLevelChange(e)}} /><br/>
-            {} */}
+            {apiResult.riskLevel}<br/>
+            
 
             <br/><input id="submitBtn" type="submit" value="Submit"/>
         </form>
