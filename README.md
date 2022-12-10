@@ -1,7 +1,7 @@
 # Maternal Health (T20 Project)
 
 ## Introduction
-Through the Web application, we aim to help pregnant women track their maternal health and predict potential risk based on age, blood pressure, blood glucose and heart rate using a pre-trained classification machine learning model. The user data is collected through both IoT device and inputs prompted through the app UI. Dashboard is displayed for users to monitor the trend of their maternal health metircs and predicted risk level on a daily basis. Alerts are sent to users (through SMS) once abnormal metric is detected. 
+Through the web application, we aim to help pregnant women track their maternal health and predict potential risk based on age, blood pressure, blood glucose and heart rate using a pre-trained classification machine learning model. The user data is collected through both IoT device and inputs prompted through the app's UI. Dashboard is displayed for users to monitor the trend of their maternal health metircs and predicted risk level on a daily basis. Alerts are sent to users (through SMS) once an abnormal metric is detected.
 
 ## Architecture Overview
 ![MicrosoftTeams-image (2)1](diagrams/T20_ADS_V2.drawio.png)
