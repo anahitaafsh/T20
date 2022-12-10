@@ -12,7 +12,7 @@ Through the web application, we aim to help pregnant women track their maternal 
 * Build an anomaly detection model on the maternal health dataset
 * Select and validate the optimal models based on the Precision/Recall rates 
 * Deploy the optimal models to new data from input/IoT
-* Configure the trigger in the App to send alert SMS
+* Configure the trigger in the app to send alert SMS
 * Configure data storage for different components
 * Configure Azure Action Directory for the app and other security components
 
