@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { PowerBIEmbed } from 'powerbi-client-react';
 const axios = require('axios').default;
 import React from 'react';
 
@@ -50,6 +51,7 @@ function ProjectSteps(props) {
       ))}
             </div>
         </>
+        
     )
 }
 
