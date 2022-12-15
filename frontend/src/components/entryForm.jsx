@@ -3,6 +3,7 @@ import React from 'react';
 const axios = require('axios').default;
 import '../styles/entryForm.css';
 import { useEffect } from "react";
+export const breakline = '\u000A';
 
 function EntryForm(props) {
     //Variables for the form
@@ -12,68 +13,67 @@ function EntryForm(props) {
     const [bs, setBS] = useState('');
     const [bodyTemp, setBodyTemp] = useState('');
     const [heartRate, setHeartRate] = useState('');
-    const [apiResult, setApiResult ] = useState({
-        anomaly_bodyTemp:null,
-        anomaly_bs:null, 
-        anomaly_dbp:null,
-        anomaly_hr:null,
-        anomaly_sbp:null,
-        riskLevel:null,
+    const [apiResult, setApiResult] = useState({
+        anomaly_bodyTemp: null,
+        anomaly_bs: null,
+        anomaly_dbp: null,
+        anomaly_hr: null,
+        anomaly_sbp: null,
+        riskLevel: null,
     });
     console.log(apiResult);
     // const [riskLevel, setRiskLevel] = useState('');
 
-    useEffect(()=>{}, []);
-  
-    
+
+
     const handleAgeChange = (e) => {
-        if(isNaN(age)){
+        if (isNaN(age)) {
             alert('Please enter a numerical value');
         } else {
             setAge(e.target.value);
         }
     }
-    
+
     const handleSystolicBPChange = (e) => {
-        if(isNaN(systolicBP)){
+        if (isNaN(systolicBP)) {
             alert('Please enter a numerical value');
         } else {
             setSystolicBP(e.target.value);
         }
     }
-   
+
     const handleDiastolicBPChange = (e) => {
-        if(isNaN(diastolicBP)){
+        if (isNaN(diastolicBP)) {
             alert('Please enter a numerical value');
         } else {
             setDiastolicBP(e.target.value);
         }
     }
-    
+
     const handleBSChange = (e) => {
-        if(isNaN(bs)){
+        if (isNaN(bs)) {
             alert('Please enter a numerical value');
         } else {
             setBS(e.target.value);
         }
     }
-   
+
     const handleBodyTempChange = (e) => {
-        if(isNaN(bodyTemp)){
+        if (isNaN(bodyTemp)) {
             alert('Please enter a numerical value');
         } else {
             setBodyTemp(e.target.value);
         }
     }
-   
+
     const handleHeartRateChange = (e) => {
-        if(isNaN(heartRate)){
+        if (isNaN(heartRate)) {
             alert('Please enter a numerical value');
         } else {
             setHeartRate(e.target.value);
         }
     }
-    
+
     // const handleRiskLevelChange = (e) => {
     //     if(isNaN(riskLevel)){
     //         alert('Please enter a numerical value');
@@ -81,76 +81,89 @@ function EntryForm(props) {
     //         setRiskLevel(e.target.value);
     //     }
     // }
-   
+
     const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log('An entry was submitted with the Age: ' + age +', SystolicBP: ' + systolicBP + ', DiastolicBP: ' +
-        diastolicBP + ", Blood Sugar: " + bs + ", Body Temperature: " + bodyTemp + ", Heart Rate: " + heartRate);
-        const response = await axios.post('http://localhost:4000/predict', 
+        console.log('An entry was submitted with the Age: ' + age + ', SystolicBP: ' + systolicBP + ', DiastolicBP: ' +
+            diastolicBP + ", Blood Sugar: " + bs + ", Body Temperature: " + bodyTemp + ", Heart Rate: " + heartRate);
+        const response = await axios.post('http://localhost:4000/predict',
             {
-                age:age, 
-                systolicBP, 
-                diastolicBP, 
-                BS:bs, 
-                bodyTemp, 
-                heartRate, 
+                age: age,
+                systolicBP,
+                diastolicBP,
+                BS: bs,
+                bodyTemp,
+                heartRate,
                 // riskLevel
-        });
+            });
         console.log(response.data);
         setApiResult(response.data);
+        props.refresh(prev=>!prev);
     }
 
     return (
         <>
-        <form id="entryForm" onSubmit={(e) => {handleSubmit(e)}}>
-        <h6>Health Data Submission Form</h6><br/>
-            <br/><label>
-            Age:
-            </label><br/>
-            <input type="text" value={age} required onChange={(e) => {handleAgeChange(e)}} /><br/>
+            <form id="entryForm" onSubmit={(e) => { handleSubmit(e) }}>
+                <div className="row">
+                    <div className="col-6">
+                        <div className="input-group mb-2">
+                            <div className="input-group-prepend">
+                                <span className="input-group-text">Age </span>
+                            </div>
+                            <input type="text" className="form-control" value={age} required onChange={(e) => { handleAgeChange(e) }}  />
+                        </div>
 
-            <br/><label>
-            SystolicBP:
-            </label><br/>
-            <input type="text" value={systolicBP} required onChange={(e) => {handleSystolicBPChange(e)}} />
-            {apiResult.anomaly_sbp==-1 && <span>!!</span>}
-            <br/>
+                        <div className="input-group mb-2">
+                            <div className="input-group-prepend">
+                                <span className="input-group-text">Systolic BP</span>
+                            </div>
+                            <input type="text" className = "form-control" value={systolicBP} required onChange={(e) => { handleSystolicBPChange(e) }} />
+                        </div>
 
-            <br/><label>
-            DiastolicBP:
-            </label><br/>
-            <input type="text" value={diastolicBP} required onChange={(e) => {handleDiastolicBPChange(e)}} />
-            {apiResult.anomaly_dbp==-1 && <span>!!</span>}
-            <br/>
+                        <div className="input-group mb-2">
+                            <div className="input-group-prepend ">
+                                <span className="input-group-text">Diastolic BP</span>
+                            </div>
+                            <input type="text" className = "form-control" value={diastolicBP} required onChange={(e) => { handleDiastolicBPChange(e) }} />
+                        </div>
+                    </div>
 
-            <br/><label>
-            BS:
-            </label><br/>
-            <input type="text" value={bs} required onChange={(e) => {handleBSChange(e)}} />
-            {apiResult.anomaly_bs==-1 && <span>!!</span>}
-            <br/>
+                    <div className="col-6">
+                        <div className="input-group mb-2">
+                            <div className="input-group-prepend">
+                                <span className="input-group-text">Blood Sugar</span>
+                            </div>
+                            <input type="text" className = "form-control" value={bs} required onChange={(e) => { handleBSChange(e) }} />
+                        </div>
 
-            <br/><label>
-            BodyTemp:
-            </label><br/>
-            <input type="text" value={bodyTemp} required onChange={(e) => {handleBodyTempChange(e)}} />
-            {apiResult.anomaly_bodyTemp==-1 && <span>!!</span>}
-            <br/>
+                        <div className="input-group mb-2">
+                            <div className="input-group-prepend">
+                                <span className="input-group-text">Body Temperature</span>
+                            </div>
+                            <input type="text" className = "form-control" value={bodyTemp} required onChange={(e) => { handleBodyTempChange(e) }} />
+                            {apiResult.anomaly_sbp == -1 && <div className="feedback-invalid">!!</div>}
+                        </div>
 
-            <br/><label>
-            HeartRate:
-            </label><br/>
-            <input type="text" value={heartRate} required onChange={(e) => {handleHeartRateChange(e)}} /><br/>
-            { apiResult.anomaly_hr==-1 && <span >!!</span> }
+                        <div className="input-group mb-2">
+                            <div className="input-group-prepend">
+                                <span className="input-group-text">Heart Rate</span>
+                            </div>
+                            <input type="text" className = "form-control" value={heartRate} required onChange={(e) => { handleSystolicBPChange(e) }} />
+                        </div>
 
-            <br/><label>
-            RiskLevel:
-            </label><br/>
-            {apiResult.riskLevel}<br/>
-            
+                    </div>
+                </div>
 
-            <br/><input id="submitBtn" type="submit" value="Submit"/>
-        </form>
+                <h6>Health Data Submission Form{breakline}</h6><br />
+
+                <br /><label>
+                    RiskLevel:
+                </label><br />
+                {apiResult.riskLevel}<br />
+
+
+                <br /><input id="submitBtn" type="submit" value="Submit" />
+            </form>
         </>
     )
 }

@@ -57,6 +57,20 @@ app.get('/predict',async (req,res)=>{
     res.json({result: result.recordset})
 });
 
+app.get('/maternal', async(req, res)=>{
+    // need auth
+    const isAuthorized = true; //todo
+    if (isAuthorized==false){
+        return res.status(401).json({error:'You are not authorized to access this data'});
+    }
+    const results = await (await sql.query('select * from [dbo].[maternal];')).recordset;
+    res.json(results);
+});
+// app.post('/maternal', async()=>{});
+// app.put('/maternal/:id', async()=>{});
+// app.get('/maternal/:id', async()=>{});
+// app.delete('/maternal/:id', async()=>{});
+
 //Test pushing data entries
 app.post('/test',async (req,res)=>{
     //let userId = '5; drop table User'

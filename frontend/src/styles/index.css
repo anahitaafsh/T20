@@ -144,9 +144,23 @@ code {
   transform: rotate(45deg);
 }
 
+
+h5 {
+  font-size: 25px;
+  text-align: center;
+  background-color: #007fff;
+}
+
+
 h6 {
   font-size: 22px;
   text-align: center;
+}
+
+h4 {
+  font-size: 22px;
+  text-align: center;
+  background-color: #000080;
 }
 
 .navLinks {
@@ -157,4 +171,5 @@ form {
   border: 2px black;
   padding: 30px;
   text-align: center;
+  flex-wrap: 'wrap';
 }

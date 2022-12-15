@@ -13,17 +13,18 @@ import IdTokenClaims from "./components/msal/idTokenClaims";
 
 import EntryForm from "./components/entryForm";
 import WelcomeHeader from "./components/layout/welcomeHeader";
-import ProjectSteps from "./components/layout/projectSteps";
 import NavBar from "./components/layout/navigation";
+import ResultTable from "./components/layout/result-table";
 
 export const PageLayout = (props) => {
     console.log(props);
+    const [refresh, setRefresh]=useState(false);
 
     return (
         <>
             <WelcomeHeader/>
-            <EntryForm/>
-            <ProjectSteps/>
+            <EntryForm refresh={setRefresh}/>
+            <ResultTable refresh={refresh}/>
         </>
     );
 };
