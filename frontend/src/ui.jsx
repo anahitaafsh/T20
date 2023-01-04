@@ -14,7 +14,7 @@ import IdTokenClaims from "./components/msal/idTokenClaims";
 import EntryForm from "./components/entryForm";
 import WelcomeHeader from "./components/layout/welcomeHeader";
 import NavBar from "./components/layout/navigation";
-import ResultTable from "./components/layout/result-table";
+//import ResultTable from "./components/layout/result-table";
 
 export const PageLayout = (props) => {
     console.log(props);
@@ -24,7 +24,7 @@ export const PageLayout = (props) => {
         <>
             <WelcomeHeader/>
             <EntryForm refresh={setRefresh}/>
-            <ResultTable refresh={refresh}/>
+            {/*<ResultTable refresh={refresh}/>*/}
         </>
     );
 };

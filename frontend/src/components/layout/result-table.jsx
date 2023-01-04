@@ -44,6 +44,9 @@ const ResultTable = (props)=>{
     </div>
     </div>
     </>
+
 }
 
+
 export default ResultTable;
+

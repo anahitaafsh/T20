@@ -115,14 +115,14 @@ function EntryForm(props) {
 
                         <div className="input-group mb-2">
                             <div className="input-group-prepend">
-                                <span className="input-group-text">Systolic BP</span>
+                                <span className="input-group-text">Systolic Blood Pressure</span>
                             </div>
                             <input type="text" className = "form-control" value={systolicBP} required onChange={(e) => { handleSystolicBPChange(e) }} />
                         </div>
 
                         <div className="input-group mb-2">
                             <div className="input-group-prepend ">
-                                <span className="input-group-text">Diastolic BP</span>
+                                <span className="input-group-text">Diastolic Blood Pressure</span>
                             </div>
                             <input type="text" className = "form-control" value={diastolicBP} required onChange={(e) => { handleDiastolicBPChange(e) }} />
                         </div>
@@ -150,20 +150,30 @@ function EntryForm(props) {
                             </div>
                             <input type="text" className = "form-control" value={heartRate} required onChange={(e) => { handleHeartRateChange(e) }} />
                         </div>
-
                     </div>
+                    
                 </div>
 
-                <h6>Health Data Submission Form{breakline}</h6><br />
+                {/*<h6>Health Data Submission Form{breakline}</h6><br />*/}
 
+{/*
                 <br /><label>
                     RiskLevel:
                 </label><br />
                 {apiResult.riskLevel}<br />
-
-
-                <br /><input id="submitBtn" type="submit" value="Submit" />
+    */}
+                <input id="submitBtn" type="submit" value="Submit" />
             </form>
+
+            <div id="result">
+                <h7>Click on "Submit". You will see your result.</h7>
+            </div>
+
+            <div id="result2">
+                <h8>{apiResult.riskLevel}</h8>
+            </div>
+
+            
         </>
     )
 }
