@@ -38,14 +38,14 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/test',async (req,res)=>{
-    const result = await sql.query(`select * from Test`);
+    const result = await sql.query(`select * from maternal`);
     res.json({result: result.recordset})
 });
 
 app.get('/test/:age',async (req,res)=>{
     //let userId = '5; drop table User'
     // ORM - object realtion mapping
-    const result = await sql.query(`select * from Test where age='${req.params.age}'`);
+    const result = await sql.query(`select * from maternal where age='${req.params.age}'`);
     res.json({'message':'welcome user '+ req.params.userId, result})
 });
 
@@ -53,7 +53,7 @@ app.get('/test/:age',async (req,res)=>{
 app.get('/predict',async (req,res)=>{
     //let userId = '5; drop table User'
     // ORM - object realtion mapping
-    const result = await sql.query(`select * from Test`);
+    const result = await sql.query(`select * from maternal`);
     res.json({result: result.recordset})
 });
 
@@ -78,14 +78,14 @@ app.post('/test',async (req,res)=>{
     //console.log(req.body);
     const {age, systolicBP, diastolicBP, BS, bodyTemp, heartRate} = req.body
     try{
-        const qry = `insert into Test values
+        const qry = `insert into maternal values
         ('${age}','${systolicBP}','${diastolicBP}', '${BS}', '${bodyTemp}', '${heartRate}')`;
         console.log(qry);
         const result = await sql.query(qry);
         res.json({result})
     }
     catch(e){
-        console.error('error happend');
+        console.error('error happened');
         res.json({error:e}).status(500);
     }
 });
