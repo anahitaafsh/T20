@@ -148,7 +148,7 @@ function EntryForm(props) {
                             <div className="input-group-prepend">
                                 <span className="input-group-text">Heart Rate</span>
                             </div>
-                            <input type="text" className = "form-control" value={heartRate} required onChange={(e) => { handleSystolicBPChange(e) }} />
+                            <input type="text" className = "form-control" value={heartRate} required onChange={(e) => { handleHeartRateChange(e) }} />
                         </div>
 
                     </div>
