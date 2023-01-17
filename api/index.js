@@ -7,7 +7,6 @@ const {getAnomaly, getRiskLevel} = require('./aml-api');
 app.use(bodyParser.json());
 app.use(cors());
 
-
 // const sp_tenant_id = '16b3c013-d300-468d-ac64-7eda0820b6d3';
 // const sp_client_id = '3c052c87-077c-49ab-9a33-49ce629a8641';
 // const sp_sclient_ecret = 'UEq8Q~C4hQvNXA-DMZf9NgGYxAVVc3QqHTMccane';
@@ -143,8 +142,7 @@ app.post('/predict', async(req,res)=>{
     return;
 })
 
-
-
-app.listen(4000, ()=>{
-    console.log('app started')
+const port = process.env.PORT || 4000;
+app.listen(port, ()=>{
+    console.log(`app started at port ${port}`)
 })
