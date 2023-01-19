@@ -4,6 +4,7 @@ import { API_BASE } from "../../configs";
 
 
 const Row = (r)=>{
+    console.log("TESTING")
     return <tr>
         <td>{r.id}</td>
         <td>{r.age}</td>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MsalProvider, AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from "@azure/msal-react";
-import { msalConfig, b2cPolicies } from "../msal/authConfig"
+import { msalConfig, b2cPolicies, loginRequest } from "../msal/authConfig"
+import { Navbar, Button, Dropdown, DropdownButton, Nav} from "react-bootstrap";
 import React from 'react';
 
 function NavBar(props) {
@@ -51,7 +52,7 @@ function NavBar(props) {
                 <a className="navbar-brand" href="/">2022 Aspire T20 Project</a>
                 <Nav.Item><Nav.Link href = "/">Home</Nav.Link></Nav.Item>
                 <Nav.Item><Nav.Link href = "https://github.com/anahitaafsh/t20">GitHub</Nav.Link></Nav.Item>
-                {/* <NavigationBar /> */}
+                <NavigationBar />
             </Navbar>
         </>
     )
