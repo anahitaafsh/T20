@@ -18,9 +18,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
-      - name: running build********
-        run: npm run build 
-      - name: Deploy
+      - name: test current directory********
+        run: pwd 
+      - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
