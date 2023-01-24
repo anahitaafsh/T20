@@ -144,13 +144,59 @@ code {
   transform: rotate(45deg);
 }
 
-
-h5 {
-  font-size: 25px;
-  text-align: center;
-  background-color: #007fff;
+@font-face {
+  font-family: 'creati';
+  src: url(./creatifitasdemo-jra0j.ttf);
 }
 
+h5 {
+  font-size: 40px;
+  background-color: white;
+  color: #4881d5;
+  text-align: center;
+  padding: 30px;
+  height: 100px;
+  font-family: creati;
+}
+
+h7 {
+  font-size: 20px;
+  text-align: center;
+}
+
+h8 {
+  font-size: 30px;
+  text-align: center;
+  color: #4881d5;
+  font-family: creati;
+
+}
+
+#intro {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 100px;
+  margin-left: 530px;
+  margin-top: -30px;
+}
+
+#result {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 100px;
+  margin-left: 530px;
+}
+
+#result2 {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 100px;
+  margin-left: 750px;
+  margin-top: -50px;
+}
 
 h6 {
   font-size: 22px;
