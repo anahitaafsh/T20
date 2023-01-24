@@ -48,5 +48,5 @@ const ResultTable = (props)=>{
 }
 
 
-export default ResultTable;
+//export default ResultTable;
 
