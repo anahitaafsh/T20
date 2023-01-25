@@ -86,7 +86,7 @@ function EntryForm(props) {
         e.preventDefault()
         console.log('An entry was submitted with the Age: ' + age + ', SystolicBP: ' + systolicBP + ', DiastolicBP: ' +
             diastolicBP + ", Blood Sugar: " + bs + ", Body Temperature: " + bodyTemp + ", Heart Rate: " + heartRate);
-        const response = await axios.post('http://localhost:4000/predict',
+        const response = await axios.post('https://apit20.azurewebsites.net/predict',
             {
                 age: age,
                 systolicBP,
