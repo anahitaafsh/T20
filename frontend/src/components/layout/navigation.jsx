@@ -18,12 +18,16 @@ function NavBar(props) {
             instance.loginPopup(loginRequest)
                 .catch((error) => console.log(error))
         }
+
+        const handleGithub = () => {
+            window.location.replace('https://github.com/anahitaafsh/t20');
+          };
     
         return (
             <>        
                 <AuthenticatedTemplate>
                     <div className="navLinks">
-                        <Button variant="secondary" onClick="location.href='https://github.com/anahitaafsh/t20'">Github</Button>
+                        <Button variant="secondary" onClick={handleGithub}>Github</Button>
                     </div>
                     <div className="ml-auto">
                         <Button variant="info" onClick={() => instance.loginPopup(b2cPolicies.authorities.editProfile)} className="ml-auto">Edit Profile</Button>
@@ -35,7 +39,7 @@ function NavBar(props) {
                 </AuthenticatedTemplate>
                 <UnauthenticatedTemplate>
                     <div className="navLinks">
-                        <Button variant="secondary" onClick="location.href='https://github.com/anahitaafsh/t20'">Github</Button>
+                        <Button variant="secondary" onClick={handleGithub}>Github</Button>
                     </div>
                     <DropdownButton variant="secondary" className="ml-auto" drop="left" title="Sign In">
                         <Dropdown.Item as="button" onClick={handleLogin}>Sign in using Popup</Dropdown.Item>
