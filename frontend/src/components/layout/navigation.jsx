@@ -51,7 +51,6 @@ function NavBar(props) {
             <Navbar bg="primary" variant="dark">
                 <a className="navbar-brand" href="/">2022 Aspire T20 Project</a>
                 <Nav.Item><Nav.Link href = "/">Home</Nav.Link></Nav.Item>
-                <Nav.Item><Nav.Link href = "https://github.com/anahitaafsh/t20">GitHub</Nav.Link></Nav.Item>
                 <NavigationBar />
             </Navbar>
         </>
