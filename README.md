@@ -61,8 +61,7 @@ Through the web application, we aim to help pregnant women track their maternal 
 - Test UI and Model Endpoints
 - Build and Finalize Presentation
 
-
-## Project Steps
+### Project Steps
 #### App & Security
 - [X] Create Web App
 - [X] Create login permissions (e.g., create users)
