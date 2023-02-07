@@ -18,12 +18,21 @@ function NavBar(props) {
             instance.loginPopup(loginRequest)
                 .catch((error) => console.log(error))
         }
+
+        const handleGithub = () => {
+            window.location.replace('https://github.com/anahitaafsh/t20');
+        };
+
+        const handleHome = () => {
+            window.location.replace('/');
+        };
     
         return (
             <>        
                 <AuthenticatedTemplate>
                     <div className="navLinks">
-                        <Button variant="secondary" onClick="location.href='https://github.com/anahitaafsh/t20'">Github</Button>
+                        <Button variant="primary" onClick={handleHome} style={{margin: '10px;'}}>Home</Button>
+                        <Button variant="secondary" onClick={handleGithub} style={{margin: '10px;'}}>Github</Button>
                     </div>
                     <div className="ml-auto">
                         <Button variant="info" onClick={() => instance.loginPopup(b2cPolicies.authorities.editProfile)} className="ml-auto">Edit Profile</Button>
@@ -35,7 +44,8 @@ function NavBar(props) {
                 </AuthenticatedTemplate>
                 <UnauthenticatedTemplate>
                     <div className="navLinks">
-                        <Button variant="secondary" onClick="location.href='https://github.com/anahitaafsh/t20'">Github</Button>
+                        <Button variant="primary" onClick={handleHome} style={{margin: '10px;'}}>Home</Button>
+                        <Button variant="secondary" onClick={handleGithub} style={{margin: '10px;'}}>Github</Button>
                     </div>
                     <DropdownButton variant="secondary" className="ml-auto" drop="left" title="Sign In">
                         <Dropdown.Item as="button" onClick={handleLogin}>Sign in using Popup</Dropdown.Item>
@@ -48,10 +58,8 @@ function NavBar(props) {
 
     return (
         <>
-            <Navbar bg="primary" variant="dark">
+            <Navbar bg="#01A6F0" variant="dark" style={{backgroundColor: '#01A6F0', color:'#01A6F0'}}>
                 <a className="navbar-brand" href="/">2022 Aspire T20 Project</a>
-                <Nav.Item><Nav.Link href = "/">Home</Nav.Link></Nav.Item>
-                <Nav.Item><Nav.Link href = "https://github.com/anahitaafsh/t20">GitHub</Nav.Link></Nav.Item>
                 <NavigationBar />
             </Navbar>
         </>

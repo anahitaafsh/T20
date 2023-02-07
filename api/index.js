@@ -142,7 +142,7 @@ app.post('/predict', async(req,res)=>{
     return;
 })
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 7071;
 app.listen(port, ()=>{
     console.log(`app started at port ${port}`)
 })

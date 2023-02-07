@@ -22,7 +22,14 @@ label {
 
 #submitBtn {
     margin-top: 10px;
-    background-color: #4881d5;
+    margin-bottom: 10px;
+    background-color: #01A6F0;
     color: white;
-    border: 0px;
+    border: 100px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+
+#submitBtn:hover {
+    background-color: #1998d3;
 }
