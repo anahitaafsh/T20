@@ -14,6 +14,7 @@ import EntryForm from "./components/entryForm";
 import WelcomeHeader from "./components/layout/welcomeHeader";
 import NavBar from "./components/layout/navigation";
 import ResultTable from "./components/layout/result-table";
+// import Graph from "./components/layout/graph";
 
 
 export const PageLayout = (props) => {
