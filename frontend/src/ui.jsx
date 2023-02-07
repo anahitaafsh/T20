@@ -13,7 +13,8 @@ import IdTokenClaims from "./components/msal/idTokenClaims";
 import EntryForm from "./components/entryForm";
 import WelcomeHeader from "./components/layout/welcomeHeader";
 import NavBar from "./components/layout/navigation";
-//import ResultTable from "./components/layout/result-table";
+import ResultTable from "./components/layout/result-table";
+import Graph from "./components/layout/graph";
 
 
 export const PageLayout = (props) => {
@@ -25,8 +26,8 @@ export const PageLayout = (props) => {
             <NavBar/>
             {/*<WelcomeHeader/>*/}
             <EntryForm refresh={setRefresh}/>
-            {/*<ResultTable refresh={refresh}/>*/}
-            
+            <ResultTable refresh={refresh}/>
+            {/* <Graph refresh = {refresh}/> */}
         </>
     );
 };
