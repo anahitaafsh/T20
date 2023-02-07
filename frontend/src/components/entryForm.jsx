@@ -86,8 +86,8 @@ function EntryForm(props) {
         e.preventDefault()
         console.log('An entry was submitted with the Age: ' + age + ', SystolicBP: ' + systolicBP + ', DiastolicBP: ' +
             diastolicBP + ", Blood Sugar: " + bs + ", Body Temperature: " + bodyTemp + ", Heart Rate: " + heartRate);
-            const response = await axios.post('https://functionapit20.azurewebsites.net/api/t20post?',
-            // const response = await axios.post('https://apit20.azurewebsites.net/predict',
+            // const response = await axios.post('https://functionapit20.azurewebsites.net/api/t20post?',
+            const response = await axios.post('https://apit20.azurewebsites.net/predict',
             {
                 age: age,
                 systolicBP,
