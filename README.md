@@ -10,7 +10,7 @@ Through the web application, we aim to help pregnant women track their maternal 
 [T20 Final Presentation](https://microsoft-my.sharepoint.com/:p:/p/aayushimehta/EeIL2VVQYJVFiYJBkvFOBV0BpFT7SJDiFGi-wazcyVO4BQ?e=YPrI0q)
 
 ## Application
-[Our App's Site](https://red-desert-03c280310.2.azurestaticapps.net/)
+[Our App's Site](https://t20.azurewebsites.net/)
 
 
 ## Project Plan
@@ -45,41 +45,23 @@ Through the web application, we aim to help pregnant women track their maternal 
 
 
 ## Timeline
-### First Sprint (10/3 - 10/7)
+### First Sprint (October)
 - Architecture Design
 - Configure Database
-- Deploy Web App (i.e., frontend)
-- Deploy Security Components (i.e., AAD B2C sign-in)
-### Second Sprint (11/10 - 11/21)
-- Network Security (e.g., Application Gateway, WAF, NSGs)
+- Create and Deploy Web App (i.e., frontend)
+- Create and Deploy Security components (i.e., AAD B2C sign-in)
+### Second Sprint (November)
+- Create and Deploy Networking components (e.g., App Gateway, WAF, NSGs)
 - Deploy new UI
-- Deploy ML Model
+- Create and Deploy ML Model
 - Connect Database with Web App
-### Third Sprint (11/30 - 2/6)
-- Fix & Deliver Final UI Features
+### Third Sprint (December-January)
+- Deploy Web App (i.e., backend)
+- Fix & Deliver Final UI features
+- Test UI and Configure Read-only Specific User Data
 - Troubleshoot Deployment and B2C Issues
-- Test UI and Model Endpoints
 - Build and Finalize Presentation
-
-### Project Steps
-#### App & Security
-- [X] Create Web App
-- [X] Create login permissions (e.g., create users)
-- [X] Add sign-in features
-- [X] Read from database / read-only specific user data
-- [X] Display user data on UI
-- [X] Configure Web App Gateway
-- [X] Configure network security features (e.g., NSGs, WAF)
-#### AI
-- [X] Train data
-- [X] Find optimal models
-- [X] Create predictions
-- [X] Deploy & test models
-#### Storage
-- [X] Create database
-- [X] Connect to Web App
-- [X] Process & manage data
-#### Future Considerations
+### Future Considerations
 - Implement IoT components
 
 ## Original Project Proposal
