@@ -55,7 +55,7 @@ Through the web application, we aim to help pregnant women track their maternal 
 - Deploy new UI
 - Create and Deploy ML Model
 - Connect Database with Web App
-### Third Sprint (December-January)
+### Third Sprint (December - January)
 - Deploy Web App (i.e., backend)
 - Fix & Deliver Final UI features
 - Test UI and Configure Read-only Specific User Data
