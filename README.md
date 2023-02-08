@@ -10,7 +10,7 @@ Through the web application, we aim to help pregnant women track their maternal 
 [T20 Final Presentation](https://microsoft-my.sharepoint.com/:p:/p/aayushimehta/EeIL2VVQYJVFiYJBkvFOBV0BpFT7SJDiFGi-wazcyVO4BQ?e=YPrI0q)
 
 ## Application
-[Our App's Site](https://t20.azurewebsites.net/)
+[Our App's Site](https://red-desert-03c280310.2.azurestaticapps.net/)
 
 
 ## Project Plan
