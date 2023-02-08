@@ -23,7 +23,6 @@ export const PageLayout = (props) => {
     return (
         <>
             <NavBar/>
-            {/*<WelcomeHeader/>*/}
             <EntryForm refresh={setRefresh}/>
             <ResultTable refresh={refresh}/>
         </>

@@ -32,7 +32,6 @@ const Row = (r)=>{
 const ResultTable = (props)=>{
     const [results, setResults] = useState([]);
     const refresh = props.refresh
-    console.log("ENTERRESULTTABLE")
     useEffect(async()=>{
         const r = await fetch(API_BASE+'/maternal');
         const tbl = await r.json();
@@ -51,8 +50,6 @@ const ResultTable = (props)=>{
         diasBP[i] = results[i].diastolicBP
         bodyTemps[i] = results[i].bodyTemp
     }
-    console.log("Blood Sugar Array")
-    console.log(bs)
 
     //Blood Sugar
     const bloodSugarData = {
