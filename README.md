@@ -24,7 +24,7 @@ Through the web application, we aim to help pregnant women track their maternal 
 * Build web application UI
 
 ### About the data
-* [Maternal Health Risk Dataset](https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data) (hosted on Kaggle) contains information of age, systolic blood pressure, diastolic blood pressure, blood glucose, heartrate and risk level amongst 1,014 women. The data is collected from different hospitals and clinics. Experts classified the risk levels.
+* [Maternal Health Risk Dataset](https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data) (hosted on Kaggle) contains information of age, systolic blood pressure, diastolic blood pressure, blood glucose, heartrate, and risk level amongst 1,014 women. The data is collected from different hospitals and clinics. Experts classified the risk levels.
 * Data from users for prediction and trend analysis is collected on a daily basis through the web app's UI.
 
 
@@ -64,8 +64,6 @@ Through the web application, we aim to help pregnant women track their maternal 
 ### Future Considerations
 - Implement IoT components
 
-## Original Project Proposal
-[Original T20 Proposal](https://microsoft-my.sharepoint.com/:w:/p/wanchenliu/EcsrYwyAj69AnhiXRGwDBh4BdOyCXd6ZhlzMOdW-g8Uldw?e=GXkAah)
 
 ## Resources
 [T20 Notebook](https://microsoft-my.sharepoint.com/:o:/p/ashwinse/EogkyHHf01BPg6eagl_1lB0BNoCmUrUQUJMD_Ev7TIAf5g?e=bfvpi3)
