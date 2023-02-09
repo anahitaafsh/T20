@@ -4,7 +4,7 @@
 Through the web application, we aim to help pregnant women track their maternal health and predict potential risk based on age, blood pressure, blood glucose and heart rate using a pre-trained classification machine learning model. The user data is collected through user inputs prompted through the app's UI. The dashboard is displayed for users to monitor the trend of their maternal health metrics and predicted risk level daily. Conceptually, alerts will be sent to users (through SMS) once an abnormal metric is detected.
 
 ## Architecture Overview
-![MicrosoftTeams-image (2)1](diagrams/final_adf.png)
+![MicrosoftTeams-image (2)1](diagrams/f_adf.png)
 
 ## Final Presentation
 [T20 Final Presentation](https://microsoft-my.sharepoint.com/:p:/p/aayushimehta/EeIL2VVQYJVFiYJBkvFOBV0BpFT7SJDiFGi-wazcyVO4BQ?e=YPrI0q)
