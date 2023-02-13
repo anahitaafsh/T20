@@ -72,9 +72,6 @@ app.get('/maternal', async(req, res)=>{
 
 //Test pushing data entries
 app.post('/test',async (req,res)=>{
-    //let userId = '5; drop table User'
-    // ORM - object realtion mapping
-    //console.log(req.body);
     const {age, systolicBP, diastolicBP, BS, bodyTemp, heartRate} = req.body
     try{
         const qry = `insert into maternal values
@@ -84,7 +81,7 @@ app.post('/test',async (req,res)=>{
         res.json({result})
     }
     catch(e){
-        console.error('error happened');
+        console.error('error posting values');
         res.json({error:e}).status(500);
     }
 });
@@ -106,16 +103,6 @@ app.post('/predict', async(req,res)=>{
     const anomaly_bodyTemp = await getAnomaly('bodyTemp', input.bodyTemp)
     //const anomaly_age = await getAnomaly('age', input.age);
     const riskLevel = await getRiskLevel(input);
-    //....
-
-    //alternative: parallel fetch
-    // const results = await Promise.all([
-    //     getRiskLevel(input), 
-    //     getAnomalyHr(input.heartRate),
-    //     //...
-    // ]);
-    // const risk_level = results[0];
-    // const anomaly_hr = results[1];
 
     res.json({
         riskLevel,
@@ -125,7 +112,6 @@ app.post('/predict', async(req,res)=>{
         anomaly_dbp,
         anomaly_bodyTemp,
         //anomaly_age,
-        //...
     });
 
     // writing results to database
@@ -142,7 +128,7 @@ app.post('/predict', async(req,res)=>{
     return;
 })
 
-const port = process.env.PORT || 7071;
+const port = process.env.PORT || 4000;
 app.listen(port, ()=>{
     console.log(`app started at port ${port}`)
 })

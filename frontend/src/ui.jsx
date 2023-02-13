@@ -14,7 +14,7 @@ import EntryForm from "./components/entryForm";
 import WelcomeHeader from "./components/layout/welcomeHeader";
 import NavBar from "./components/layout/navigation";
 import ResultTable from "./components/layout/result-table";
-// import Graph from "./components/layout/graph";
+import Description from "./components/layout/description";
 
 
 export const PageLayout = (props) => {
@@ -23,9 +23,12 @@ export const PageLayout = (props) => {
 
     return (
         <>
-            <NavBar/>
-            <EntryForm refresh={setRefresh}/>
-            <ResultTable refresh={refresh}/>
+            <div style = {{backgroundColor: '#f5f5f5'}}>
+                <NavBar/>
+                <Description/>
+                <EntryForm refresh={setRefresh}/>
+                <ResultTable refresh={refresh}/>
+            </div>
         </>
     );
 };

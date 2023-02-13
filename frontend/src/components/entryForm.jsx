@@ -155,19 +155,11 @@ function EntryForm(props) {
                     
                 </div>
 
-                {/*<h6>Health Data Submission Form{breakline}</h6><br />*/}
-
-{/*
-                <br /><label>
-                    RiskLevel:
-                </label><br />
-                {apiResult.riskLevel}<br />
-    */}
                 <input id="submitBtn" type="submit" value="Submit" />
             </form>
 
             <div id="result">
-                <h7>Click on "Submit". You will see your result.</h7>
+                <h7>Click on "Submit" to view your results.</h7>
             </div>
 
             <div id="result2">
