@@ -95,7 +95,15 @@ const ResultTable = (props)=>{
         }],
     };
 
-    const options={};
+    const options={
+        onClick: (e) => {
+            const canvasPosition = ChartJS.helpers.getRelativePosition(e, ChartJS);
+
+            // Substitute the appropriate scale IDs
+            const dataX = ChartJS.scales.x.getValueForPixel(canvasPosition.x);
+            const dataY = ChartJS.scales.y.getValueForPixel(canvasPosition.y);
+        }
+    };
 
     
 

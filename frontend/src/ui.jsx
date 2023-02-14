@@ -23,12 +23,10 @@ export const PageLayout = (props) => {
 
     return (
         <>
-            <div style = {{backgroundColor: '#f5f5f5'}}>
                 <NavBar/>
                 <Description/>
                 <EntryForm refresh={setRefresh}/>
                 <ResultTable refresh={refresh}/>
-            </div>
         </>
     );
 };
